@@ -1,0 +1,84 @@
+/* Specialized css for the style of the website */
+body {
+    font-family: 'Open Sans', sans-serif;
+    /* font-size: 16px; */
+    /* line-height: 1.7; */
+    padding: 0;
+    margin: 0;
+    color: #777;
+    font-weight: 400;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/*
+##FE5F55
+#EEF5DB
+#4F6367
+#7A9E9F
+#B8D8D8
+*/
+
+.container {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background-color: #FE5F55;
+    color: white;
+    vertical-align: middle;
+    z-index: 10;
+}
+
+.header .logo {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+.header .logo a {
+    color: white;
+    text-decoration: none;
+}
+
+.top-cover {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-image: url('');
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.top-cover h1 {
+    position: relative;
+    color: white;
+    font-size: 5em;
+    top: 30%;
+    font-family: 'popins', sans-serif;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 768px) {
+    .header .logo {
+        font-size: 1.5em;
+    }
+
+    .top-cover h1 {
+        font-size: 3em;
+    }
+}
