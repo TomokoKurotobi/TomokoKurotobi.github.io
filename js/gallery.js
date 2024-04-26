@@ -22,20 +22,32 @@ function createPopup(id, src, alt, heading, text) {
   popup.className = 'popup';
   popup.id = id + '-popup';
 
+  // Close button, previous button, next button
+  let cross = document.createElement('div');
+  cross.className = 'fa-solid fa-xmark btn-cross';
+  cross.id = 'cross';
+
+  let prv = document.createElement('div');
+  prv.className = 'fa-solid fa-chevron-left btn-prv';
+  prv.id = 'prv';
+
+  let nxt = document.createElement('div');
+  nxt.className = 'fa-solid fa-chevron-right btn-nxt';
+  nxt.id = 'nxt';
+
+  // Popup content
   let popupContent = document.createElement('div');
   popupContent.className = 'popup-content';
 
-  let cross = document.createElement('span');
-  cross.className = 'cross';
-  cross.id = 'cross';
-  cross.textContent = '×';
+  let h2 = document.createElement('h2');
 
   let image = document.createElement('img');
   image.src = src;
   image.alt = alt;
+  h2.appendChild(image);
 
-  let h2 = document.createElement('h2');
-  h2.textContent = heading;
+  let textNode = document.createTextNode(heading);
+  h2.appendChild(textNode);
 
   let p = document.createElement('p');
   p.textContent = text;
@@ -45,12 +57,13 @@ function createPopup(id, src, alt, heading, text) {
   button.id = 'close';
   button.textContent = 'Close';
 
-  popupContent.appendChild(cross);
-  popupContent.appendChild(image);
   popupContent.appendChild(h2);
   popupContent.appendChild(p);
   popupContent.appendChild(button);
 
+  popup.appendChild(cross);
+  popup.appendChild(prv);
+  popup.appendChild(nxt);
   popup.appendChild(popupContent);
 
   return popup;
@@ -82,6 +95,14 @@ var items = [
     text: 'This is a popup window!'
   },
   {
+    id: 'typescript',
+    src: 'figures/TypeScript_Logo.png',
+    alt: 'Programming',
+    caption: 'TypeScript',
+    heading: 'TypeScript Programming',
+    text: 'This is a popup window!'
+  },
+  {
     id: 'opencv',
     src: 'figures/OpenCV_Logo.png',
     alt: 'Framework',
@@ -106,11 +127,51 @@ var items = [
     text: 'This is a popup window!'
   },
   {
+    id: 'react',
+    src: 'figures/React_Logo.webp',
+    alt: 'Framework',
+    caption: 'React',
+    heading: 'React Framework',
+    text: 'This is a popup window!'
+  },
+  {
+    id: 'cmake',
+    src: 'figures/CMake_Logo.png',
+    alt: 'Framework',
+    caption: 'CMake',
+    heading: 'CMake Framework',
+    text: 'This is a popup window!'
+  },
+  {
+    id: 'ros',
+    src: 'figures/ROS_Logo.png',
+    alt: 'Framework',
+    caption: 'ROS',
+    heading: 'ROS Framework',
+    text: 'This is a popup window!'
+  },
+  {
+    id: 'github',
+    src: 'figures/GitHub_Logo.png',
+    alt: 'Framework',
+    caption: 'GitHub',
+    heading: 'GitHub Framework',
+    text: 'This is a popup window!'
+  },
+  {
     id: 'grpc',
     src: 'figures/gRPC_Logo.png',
     alt: 'Framework',
     caption: 'gRPC',
     heading: 'gRPC Framework',
+    text: 'This is a popup window!'
+  },
+  {
+    id: 'node',
+    src: 'figures/Node_Logo.png',
+    alt: 'Framework',
+    caption: 'Node.js',
+    heading: 'Node.js Framework',
     text: 'This is a popup window!'
   },
   {
@@ -129,8 +190,23 @@ var items = [
     heading: 'Windows Operating System',
     text: 'This is a popup window!'
   },
+  {
+    id: 'troubleshooting',
+    src: 'figures/Troubleshooting_Logo.png',
+    alt: 'Operating System',
+    caption: 'Troubleshooting',
+    heading: 'Troubleshooting Operating System',
+    text: 'This is a popup window!'
+  },
+  {
+    id: 'optimization',
+    src: 'figures/Optimization_Logo.png',
+    alt: 'Operating System',
+    caption: 'Optimization',
+    heading: 'Optimization Operating System',
+    text: 'This is a popup window!'
+  }
 ];
-
 
 function createGallery() {
   let gallery = document.getElementById('gallery-grid');
@@ -144,8 +220,10 @@ function createGallery() {
     gallery.appendChild(popup);
   }
 }
+createGallery();
+
 $(document).ready(function() {
-  items.forEach(function(item) {
+  items.forEach(function(item, index) {
     var popup = $('#' + item.id + '-popup');
     $('#' + item.id).click(function() {
       popup.show();
@@ -156,6 +234,15 @@ $(document).ready(function() {
     popup.find('#close').click(function() {
       popup.hide();
     });
+    popup.find('#prv').click(function() {
+      popup.hide();
+      var prevIndex = (index - 1 + items.length) % items.length;
+      $('#' + items[prevIndex].id + '-popup').show();
+    });
+    popup.find('#nxt').click(function() {
+      popup.hide();
+      var nextIndex = (index + 1) % items.length;
+      $('#' + items[nextIndex].id + '-popup').show();
+    });
   });
 });
-createGallery();

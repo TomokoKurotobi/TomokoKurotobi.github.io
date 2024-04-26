@@ -3,7 +3,7 @@ body {
     font-family: 'courier';
     padding: 0;
     margin: 0;
-    background: #000000;
+    background: #3C3C3C;
     color: #d3d7cf;
     -webkit-font-smoothing: antialiased;
 }
@@ -11,6 +11,10 @@ body {
 /* Terminal colors */
 .bg-black {
     background-color: #000000;
+}
+
+.bg-dark-grey {
+    background-color: #3C3C3C;
 }
 
 .bg-light-black {
@@ -33,6 +37,10 @@ body {
     background-color: #ad7fa8;
 }
 
+.bg-green {
+    background-color: #4e9a06;
+}
+
 .bg-bright-green {
     background-color: #8ae234;
 }
@@ -52,6 +60,10 @@ body {
     overflow: hidden;
 }
 
+p {
+    font-size: 1.3em;
+}
+
 .btn {
     margin: 1em 0;
     background-color: #06989a;
@@ -60,6 +72,14 @@ body {
 
 .btn:hover {
     background-color: #729fcf;
+}
+
+.pull-right {
+    float: right;
+}
+
+.pull-left {
+    float: left;
 }
 
 /* Header */
@@ -75,12 +95,39 @@ body {
     z-index: 10;
 }
 
-.header .navbar-brand {
+.navbar-nav {
+    text-align: right;
+}
+
+.header i,
+.navbar,
+.navbar a {
     color: #d3d7cf;
 }
 
-.header .navbar-nav .nav-link {
-    color: #d3d7cf;
+.header i {
+    font-size: 1.5em;
+}
+
+.header i:hover,
+.navbar a:hover {
+    color: #729fcf;
+}
+
+.navbar-toggler .fa-bars {
+    display: inline-block;
+}
+
+.navbar-toggler .fa-times {
+    display: none;
+}
+
+.navbar-toggler.collapsed .fa-bars {
+    display: none;
+}
+
+.navbar-toggler.collapsed .fa-times {
+    display: inline-block;
 }
 
 /* Top Cover */
@@ -103,7 +150,6 @@ body {
     top: 0;
     text-align: left;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .top-cover .information {
@@ -116,7 +162,7 @@ body {
     transform: translateY(-50%);
     background-color: #729fcf;
     opacity: 0.8;
-    color: #555753;
+    color: black;
 }
 
 .top-cover .information h1 {
@@ -168,6 +214,7 @@ body {
     list-style-type: none;
     width: 20%;
     min-width: 100px;
+    max-width: 150px;
     cursor: pointer;
     margin: 1em;
 }
@@ -180,19 +227,30 @@ body {
 .gallery-item {
     position: relative;
     padding: 10px;
-    background-color: #729fcf;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 2%;
 }
 
 .gallery-item img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
     width: 100%;
     height: auto;
 }
 
 .gallery-item figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #4e9a06;
+    opacity: 0.8;
     text-align: center;
-    color: black;
+    color: #d3d7cf;
     font-size: 1.5em;
+    overflow-wrap: break-word;
 }
 
 /* Popup container */
@@ -206,6 +264,43 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     overflow: auto;
+}
+
+.popup .btn-prv,
+.popup .btn-nxt,
+.popup .btn-cross {
+    position: absolute;
+
+    color: #aaa;
+    background-color: #3C3C3C;
+    color: #d3d7cf;
+    opacity: 0.8;
+    border-style: none;
+
+    font-size: 3em;
+    font-weight: bold;
+    cursor: pointer;
+
+    margin: 1em;
+    padding: 10px 20px;
+    z-index: 2;
+}
+
+.popup .btn-prv {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+
+.popup .btn-nxt {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+
+.popup .btn-cross {
+    top: 10%;
+    right: 0;
 }
 
 /* Popup content */
@@ -262,10 +357,45 @@ body {
     cursor: pointer;
 }
 
+.contact {
+    max-width: 500px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.contact p {
+    margin: 1em 0 0 0;
+}
+
+.contact textarea {
+    width: 100%;
+    min-height: 8em;
+}
+
+@media screen and (min-width: 1920px) {
+
+    p {
+        font-size: 1.5em;
+    }
+
+    .top-cover .information h1 {
+        font-size: 8em;
+    }
+
+    .top-cover .information h2 {
+        font-size: 5em;
+    }
+}
+
 @media screen and (max-width: 768px) {
 
     .container {
         width: 80%;
+    }
+
+    p {
+        font-size: 0.8em;
     }
 
     .top-cover .information h1 {
@@ -276,8 +406,20 @@ body {
         font-size: 1.5em;
     }
 
+    .gallery-item figcaption {
+        font-size: 1em;
+    }
+
     .popup-content {
         width: 90%;
+    }
+
+    .popup .btn-prv,
+    .popup .btn-nxt,
+    .popup .btn-cross {
+        font-size: 2em;
+        margin: 2px;
+        padding: 20px 20px;
     }
 
 }

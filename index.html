@@ -19,28 +19,30 @@
 
 <body>
     <!-- HEADER -->
-    <header id="header" class="header">
+    <section id="header" class="header bg-black">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="index.html"><i class='fa fa-home'></i></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
+                <div class="container-fluid">
+                    <h1><a class="navbar-brand" href="index.html"><i class='fa fa-home'></i></a></h1>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon">
+                            <i class="fa-solid fa-bars"></i>
+                            <i class="fa-solid fa-times"></i>
+                        </span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav pull-right">
                             <a class="nav-link" href="index.html#about">About</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="index.html#skills">Skill</a>
-                        </li>
-                    </ul>
+                            <a class="nav-link" href="index.html#contact">Contact</a>
+                        </div>
+                    </div>
                 </div>
             </nav>
         </div>
-    </header>
+    </section>
 
     <!-- HOME -->
     <section id="home" class="top-cover">
@@ -59,7 +61,30 @@
                 <h1><i class="fa-solid fa-user"></i>&nbsp;About Me</h1>
             </div>
             <div class="about-me">
-                <p>Write "about me" here</p>
+                <p style="text-align: justify;">
+                    With a rich and diverse background spanning over 11 years, including my master's degrees, I have
+                    cultivated a wealth of programming experience across various industries. From my tenure at a
+                    prominent motor company to my contributions at a groundbreaking medical device startup, each
+                    experience has been a stepping stone in my journey of continuous learning and growth. Along this
+                    path, I have mastered a multitude of computer languages, including C++, Python, JavaScript, and
+                    TypeScript, allowing me to tackle a wide array of challenges with ease and precision.
+
+                    Moreover, I have honed my expertise in essential frameworks such as Cmake, Qt, OpenCV, React, and
+                    CUDA SDK, empowering me to develop innovative solutions and elevate project outcomes. However, it is
+                    my exceptional troubleshooting skills that truly set me apart. I have a proven track record of
+                    swiftly identifying and resolving complex issues, whether they involve system crashes, resource
+                    optimization, project configurations, or runtime errors. My unwavering patience and steadfast belief
+                    in finding solutions fuel my determination to overcome any obstacle that comes my way.
+
+                    Furthermore, my knowledge spans across a diverse range of domains, from robotics and autonomous
+                    driving to scanning laser imaging devices and intricate image processing techniques. This breadth of
+                    expertise enables me to approach projects with a holistic perspective, drawing from a rich tapestry
+                    of insights to deliver optimal results.
+
+                    In essence, my journey in programming has been defined by a relentless pursuit of excellence, a
+                    commitment to continuous learning, and an unwavering passion for innovation. I am eager to leverage
+                    my skills and experiences to make meaningful contributions to future endeavors.
+                </p>
                 <h1>
                     <a href="https://www.linkedin.com/in/tomoko-kurotobi-a6b15b1b8/" class="social-link">
                         <i class="fa-brands fa-linkedin"></i>
@@ -93,25 +118,21 @@
                 <form method="post" action="https://formspree.io/f/xgegnnwo" id="contactfrm" role="form">
                     <div>
                         <p>Name *</p>
-                        <input type="text" class="form-control" name="name" id="message-name" placeholder="Enter name"
-                            title="Please enter your name" required>
+                        <input type="text" class="form-control" name="name" id="message-name"
+                            placeholder="Please enter your name" title="Enter your name" required>
                     </div>
                     <div>
-                        <p>Email *</p>
+                        <p>Email</p>
                         <input type="email" class="form-control" name="email" id="message-email"
-                            placeholder="Enter email" title="Please enter a valid email address" required>
-                    </div>
-                    <div>
-                        <p>Title *</p>
-                        <input name="title" class="form-control" type="tel" id="message-title" size="128" value=""
-                            placeholder="Enter title" title="Please enter a title" required>
+                            placeholder="Please enter email" title="Enter a valid email address">
                     </div>
                     <div>
                         <p>Message *</p>
-                        <textarea name="comment" class="form-control" id="message" placeholder="Enter your message…"
-                            title="Please enter your message" required></textarea>
+                        <textarea name="comment" class="form-control" id="message"
+                            placeholder="Please enter your message…" title="Enter your message" required></textarea>
                     </div>
-                    <button name="submit" type="submit" class="btn btn-lg btn-primary" id="submit">Submit</button>
+                    <button name="submit" type="submit" class="btn btn-lg btn-primary pull-right"
+                        id="submit">Submit</button>
             </div>
         </div>
     </section>
@@ -123,6 +144,14 @@
     <script src="js/gallery.js"></script>
     <script>
         typeBackground();
+
+        $(document).ready(function () {
+            $('.navbar-toggler').click(function () {
+                $(this).find('.fa-bars, .fa-times').toggle();
+            });
+        });
+    </script>
+    </script>
     </script>
 </body>
 
