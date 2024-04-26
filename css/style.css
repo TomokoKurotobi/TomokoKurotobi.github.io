@@ -6,47 +6,60 @@ body {
     background: #3C3C3C;
     color: #d3d7cf;
     -webkit-font-smoothing: antialiased;
+
+    /* Colors */
+    --dark-grey: #3C3C3C;
+    --light-grey: #555753;
+    --white: #d3d7cf;
+    --blue: #729fcf;
+    --yellow: #c4a000;
+    --magenta: #ad7fa8;
+    --green: #4e9a06;
+    --bright-green: #8ae234;
+    --cyan: #06989a;
+
 }
 
 /* Terminal colors */
+
 .bg-black {
     background-color: #000000;
 }
 
 .bg-dark-grey {
-    background-color: #3C3C3C;
+    background-color: var(--dark-grey);
 }
 
-.bg-light-black {
-    background-color: #555753;
+.bg-light-grey {
+    background-color: var(--light-grey);
 }
 
 .bg-white {
-    background-color: #d3d7cf;
+    background-color: var(--white);
 }
 
 .bg-blue {
-    background-color: #729fcf;
+    background-color: var(--blue);
 }
 
 .bg-yellow {
-    background-color: #c4a000;
+    background-color: var(--yellow);
 }
 
 .bg-magenta {
-    background-color: #ad7fa8;
+    background-color: var(--magenta);
 }
 
 .bg-green {
-    background-color: #4e9a06;
+    background-color: var(--green);
 }
 
 .bg-bright-green {
-    background-color: #8ae234;
+    background-color: var(--bright-green);
 }
 
 .bg-cyan {
-    background-color: #06989a;
+    background-color: var(--cyan);
 }
 
 .page-section {
@@ -66,12 +79,12 @@ p {
 
 .btn {
     margin: 1em 0;
-    background-color: #06989a;
+    background-color: var(--cyan);
     border-style: none;
 }
 
 .btn:hover {
-    background-color: #729fcf;
+    background-color: var(--blue);
 }
 
 .pull-right {
@@ -87,11 +100,11 @@ p {
     position: fixed;
     width: 100%;
     height: auto;
-    background-color: #555753;
-    color: #d3d7cf;
+    background-color: var(--light-grey);
+    color: var(--white);
     vertical-align: middle;
     display: inline-block;
-    border-bottom: #d3d7cf 1px solid;
+    border-bottom: var(--white) 1px solid;
     z-index: 10;
 }
 
@@ -102,7 +115,7 @@ p {
 .header i,
 .navbar,
 .navbar a {
-    color: #d3d7cf;
+    color: var(--white);
 }
 
 .header i {
@@ -111,7 +124,7 @@ p {
 
 .header i:hover,
 .navbar a:hover {
-    color: #729fcf;
+    color: var(--blue);
 }
 
 .navbar-toggler .fa-bars {
@@ -160,7 +173,7 @@ p {
     padding-left: 2em;
     text-align: right;
     transform: translateY(-50%);
-    background-color: #729fcf;
+    background-color: var(--blue);
     opacity: 0.8;
     color: black;
 }
@@ -186,7 +199,7 @@ p {
 /* About Me */
 .about-me a {
     padding: 5% 0;
-    color: #06989a;
+    color: var(--cyan);
 }
 
 .about-me h1 {
@@ -245,10 +258,10 @@ p {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #4e9a06;
+    background-color: var(--bright-green);
     opacity: 0.8;
     text-align: center;
-    color: #d3d7cf;
+    color: var(--dark-grey);
     font-size: 1.5em;
     overflow-wrap: break-word;
 }
@@ -262,18 +275,17 @@ p {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(0, 0, 0, 0.5); */
     overflow: auto;
 }
 
-.popup .btn-prv,
-.popup .btn-nxt,
-.popup .btn-cross {
-    position: absolute;
+.btn-prv,
+.btn-nxt,
+.btn-cross {
+    position: fixed;
 
-    color: #aaa;
-    background-color: #3C3C3C;
-    color: #d3d7cf;
+    background-color: var(--dark-grey);
+    color: var(--white);
     opacity: 0.8;
     border-style: none;
 
@@ -329,22 +341,22 @@ p {
 
 .popup-content figcaption {
     text-align: center;
-    color: #555753;
+    color: var(--light-grey);
     font-size: 1.5em;
 }
 
 .popup-content h2 {
     text-align: center;
-    color: #555753;
+    color: var(--light-grey);
 }
 
 .popup-content p {
-    color: #555753;
+    color: var(--light-grey);
 }
 
 /* Cross button */
 .cross {
-    color: #aaa;
+    color: var(--white);
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -352,7 +364,7 @@ p {
 
 .cross:hover,
 .cross:focus {
-    color: #555753;
+    color: var(--light-grey);
     text-decoration: none;
     cursor: pointer;
 }
