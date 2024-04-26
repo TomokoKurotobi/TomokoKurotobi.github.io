@@ -55,14 +55,29 @@
 
     <section id="about" class="page-section  bg-light-black">
         <div class="container">
-            <p>Write "about me" here</p>
+            <div class="heading">
+                <h1><i class="fa-solid fa-user"></i>&nbsp;About Me</h1>
+            </div>
+            <div class="about-me">
+                <p>Write "about me" here</p>
+                <h1>
+                    <a href="https://www.linkedin.com/in/tomoko-kurotobi-a6b15b1b8/" class="social-link">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/TomokoKurotobi" class="social-link">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </h1>
+            </div>
         </div>
     </section>
 
     <section id="skills" class="page-section">
         <div class="container">
+            <div class="heading">
+                <h1><i class="fa-solid fa-code"></i>&nbsp;Skills</h1>
+            </div>
             <div class="gallery">
-                <h1><i class="fa-solid fa-code"></i> Skills</h1>
                 <ul class="gallery-grid">
                     <li class="gallery-item" id="cpp">
                         <img src="figures/programming-background-with-html-text.jpg" alt="Programming">
@@ -74,7 +89,7 @@
                             <img src="figures/programming-background-with-html-text.jpg" alt="Programming">
                             <h2>Popup Content</h2>
                             <p>This is a popup window!</p>
-                            <button class="close" id="close">Close</button>
+                            <button class="btn btn-lg btn-primary pull-right" id="close">Close</button>
                         </div>
                     </div>
 
@@ -88,7 +103,7 @@
                             <img src="figures/programming-background-with-html-text.jpg" alt="Programming">
                             <h2>Popup Content</h2>
                             <p>This is a popup window!</p>
-                            <button class="close" id="close">Close</button>
+                            <button class="btn btn-lg btn-primary pull-right" id="close">Close</button>
                         </div>
                     </div>
 
@@ -102,7 +117,7 @@
                             <img src="figures/programming-background-with-html-text.jpg" alt="Programming">
                             <h2>Popup Content</h2>
                             <p>This is a popup window!</p>
-                            <button class="close" id="close">Close</button>
+                            <button class="btn btn-lg btn-primary pull-right" id="close">Close</button>
                         </div>
                     </div>
 
@@ -116,7 +131,7 @@
                             <img src="figures/programming-background-with-html-text.jpg" alt="Programming">
                             <h2>Popup Content</h2>
                             <p>This is a popup window!</p>
-                            <button class="close" id="close">Close</button>
+                            <button class="btn btn-lg btn-primary pull-right" id="close">Close</button>
                         </div>
                     </div>
 
@@ -130,7 +145,7 @@
                             <img src="figures/programming-background-with-html-text.jpg" alt="Programming">
                             <h2>Popup Content</h2>
                             <p>This is a popup window!</p>
-                            <button class="close" id="close">Close</button>
+                            <button class="btn btn-lg btn-primary pull-right" id="close">Close</button>
                         </div>
                     </div>
 
@@ -144,10 +159,42 @@
                             <img src="figures/programming-background-with-html-text.jpg" alt="Programming">
                             <h2>Popup Content</h2>
                             <p>This is a popup window!</p>
-                            <button class="close" id="close">Close</button>
+                            <button class="btn btn-lg btn-primary pull-right" id="close">Close</button>
                         </div>
                     </div>
                 </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="page-section bg-light-black">
+        <div class="container">
+            <div class="heading">
+                <h1><i class="fa-solid fa-envelope"></i>&nbsp;Contact</h1>
+            </div>
+            <div class="contact">
+                <form method="post" action="https://formspree.io/f/xgegnnwo" id="contactfrm" role="form">
+                    <div>
+                        <p>Name *</p>
+                        <input type="text" class="form-control" name="name" id="message-name" placeholder="Enter name"
+                            title="Please enter your name" required>
+                    </div>
+                    <div>
+                        <p>Email *</p>
+                        <input type="email" class="form-control" name="email" id="message-email"
+                            placeholder="Enter email" title="Please enter a valid email address" required>
+                    </div>
+                    <div>
+                        <p>Title *</p>
+                        <input name="title" class="form-control" type="tel" id="message-title" size="128" value=""
+                            placeholder="Enter title" title="Please enter a title" required>
+                    </div>
+                    <div>
+                        <p>Message *</p>
+                        <textarea name="comment" class="form-control" id="message" placeholder="Enter your message…"
+                            title="Please enter your message" required></textarea>
+                    </div>
+                    <button name="submit" type="submit" class="btn btn-lg btn-primary" id="submit">Submit</button>
             </div>
         </div>
     </section>
