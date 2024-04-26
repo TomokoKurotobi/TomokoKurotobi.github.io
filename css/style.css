@@ -183,14 +183,20 @@ body {
 
 /* Popup content */
 .popup-content {
+    position: relative;
     background-color: #fefefe;
-    margin: 10% auto;
     padding: 1px 20px;
     border: 1px solid #888;
     border-radius: 1%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 70%;
-    min-height: 80%;
     max-width: 600px;
+    height: 80%;
+    min-height: 200px;
+    max-height: 600px;
+    overflow: auto;
     display: block;
 }
 
@@ -264,6 +270,10 @@ body {
 
     .top-cover p {
         font-size: 1em;
+    }
+
+    .popup-content {
+        width: 90%;
     }
 
 }
