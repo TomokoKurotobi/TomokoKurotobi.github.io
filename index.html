@@ -34,9 +34,6 @@
                         <li class="nav-item">
                             <a class="nav-link" href="index.html#skills">Skill</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="hobby.html">Hobby</a>
-                        </li>
                     </ul>
                 </div>
             </nav>
@@ -44,54 +41,100 @@
     </header>
 
     <!-- HOME -->
-    <section id="home" class="top-cover"
-        style="background-image: url('figures/anthropomorphic-robot-that-performs-regular-human-job.jpg');">
-        <div class="description">
+    <section id="home" class="top-cover">
+        <div class="background">
+            <p id="terminal-contents"></p>
+        </div>
+        <div class="information">
             <h1>Tomoko Kurotobi</h1>
             <h2>Software Developer</h2>
-        </div>
+            </divv>
     </section>
 
-    <section id="about" class="page-section">
+    <section id="about" class="page-section  bg-light-black">
         <div class="container">
             <p>Write "about me" here</p>
         </div>
     </section>
 
-    <section id="skills" class="page-section bg-color5">
+    <section id="skills" class="page-section">
         <div class="container">
             <div class="gallery">
-                <h1>Computer Language</h1>
+                <h1>Skills</h1>
                 <ul class="gallery-grid">
-                    <li class="gallery-item">
+                    <li class="gallery-item" id="cpp">
                         <img src="figures/programming-background-with-html-text.jpg" alt="Programming">
                         <figcaption>C++</figcaption>
                     </li>
-                    <li class="gallery-item">
+                    <div class="popup" id="cpp-popup">
+                        <div class="popup-content">
+                            <span class="close" id="close">&times;</span>
+                            <h2>Popup Content</h2>
+                            <p>This is a popup window!</p>
+                            <button id="close">Close</button>
+                        </div>
+                    </div>
+
+                    <li class="gallery-item" id="python">
                         <img src="figures/programming-background-with-html-text.jpg" alt="Programming">
                         <figcaption>Python</figcaption>
                     </li>
-                    <li class="gallery-item">
+                    <div class="popup" id="python-popup">
+                        <div class="popup-content">
+                            <span class="close" id="close">&times;</span>
+                            <h2>Popup Content</h2>
+                            <p>This is a popup window!</p>
+                        </div>
+                    </div>
+
+                    <li class="gallery-item" id="javascript">
                         <img src="figures/programming-background-with-html-text.jpg" alt="Programming">
                         <figcaption>JavaScript</figcaption>
                     </li>
-                </ul>
-                <h1>Framework</h1>
-                <ul class="gallery-grid">
-                    <li class="gallery-item">
+                    <div class="popup" id="javascript-popup">
+                        <div class="popup-content">
+                            <span class="close" id="close">&times;</span>
+                            <h2>Popup Content</h2>
+                            <p>This is a popup window!</p>
+                        </div>
+                    </div>
+
+                    <li class="gallery-item" id="opencv">
                         <img src="figures/programming-background-with-html-text.jpg" alt="Programming">
                         <figcaption>OpenCV</figcaption>
                     </li>
-                    <li class="gallery-item">
+                    <div class="popup" id="opencv">
+                        <div class="popup-content">
+                            <span class="close" id="close">&times;</span>
+                            <h2>Popup Content</h2>
+                            <p>This is a popup window!</p>
+                        </div>
+                    </div>
+
+                    <li class="gallery-item" id="cudasdk">
                         <img src="figures/programming-background-with-html-text.jpg" alt="Programming">
                         <figcaption>CUDA SDK</figcaption>
                     </li>
-                    <li class="gallery-item">
+                    <div class="popup" id="cudasdk-popup">
+                        <div class="popup-content">
+                            <span class="close" id="close">&times;</span>
+                            <h2>Popup Content</h2>
+                            <p>This is a popup window!</p>
+                        </div>
+                    </div>
+
+                    <li class="gallery-item" id="grpc">
                         <img src="figures/programming-background-with-html-text.jpg" alt="Programming">
                         <figcaption>gRPC</figcaption>
                     </li>
+                    <div class="popup" id="grpc-popup">
+                        <div class="popup-content">
+                            <span class="close" id="close">&times;</span>
+                            <h2>Popup Content</h2>
+                            <p>This is a popup window!</p>
+                        </div>
+                    </div>
                 </ul>
-
             </div>
         </div>
     </section>
@@ -99,10 +142,25 @@
 
     <script src="js/jquery-3.7.1.slim.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/typing-effect.js"></script>
     <script>
-        $(window).on('resize', function () {
-            $('#home').css('top', $('#header').height() + 'px)');
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var galleryItems = ['cpp', 'python', 'javascript', 'opencv', 'cudasdk', 'grpc'];
+            galleryItems.forEach(function (item) {
+                var popup = document.getElementById(item + '-popup');
+                popup.getElementsByClassName('close')[0].addEventListener('click', function () {
+                    popup.style.display = 'none';
+                });
+
+                document.getElementById(item).addEventListener('click', function () {
+                    popup.style.display = 'block';
+                });
+            });
+
         });
+
+        runTypingEffects();
     </script>
 </body>
 

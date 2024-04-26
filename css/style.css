@@ -3,55 +3,50 @@ body {
     font-family: 'courier';
     padding: 0;
     margin: 0;
-    background: white;
-    color: #4F6367;
+    background: #000000;
+    color: #d3d7cf;
     -webkit-font-smoothing: antialiased;
 }
 
-.body-hobby {
-    font-family: 'bradley hand';
-    padding: 0;
-    margin: 0;
-    background: white;
-    color: #4F6367;
-    -webkit-font-smoothing: antialiased;
+/* Terminal colors */
+.bg-black {
+    background-color: #000000;
 }
 
-/*
-##FE5F55
-#EEF5DB
-#4F6367
-#7A9E9F
-#B8D8D8
-*/
-
-.bg-color1 {
-    background-color: #FE5F55;
+.bg-light-black {
+    background-color: #555753;
 }
 
-.bg-color2 {
-    background-color: #EEF5DB;
+.bg-white {
+    background-color: #d3d7cf;
 }
 
-.bg-color3 {
-    background-color: #4F6367;
-
+.bg-blue {
+    background-color: #729fcf;
 }
 
-.bg-color4 {
-    background-color: #7A9E9F;
+.bg-yellow {
+    background-color: #c4a000;
 }
 
-.bg-color5 {
-    background-color: #B8D8D8;
+.bg-magenta {
+    background-color: #ad7fa8;
+}
+
+.bg-bright-green {
+    background-color: #8ae234;
+}
+
+.bg-cyan {
+    background-color: #06989a;
 }
 
 .page-section {
-    padding: 80px 0;
+    padding: 5% 0;
 }
 
 .container {
-    width: 60%;
+    width: 80%;
     height: 100%;
     margin: auto;
     overflow: hidden;
@@ -62,8 +57,8 @@ body {
     position: fixed;
     width: 100%;
     height: auto;
-    background-color: #FE5F55;
-    color: white;
+    background-color: #555753;
+    color: #d3d7cf;
     vertical-align: middle;
     display: inline-block;
 
@@ -71,51 +66,61 @@ body {
 }
 
 .header .navbar-brand {
-    color: white;
+    color: #d3d7cf;
     font-size: 2em;
 }
 
 .header .navbar-nav .nav-link {
-    color: white;
+    color: #d3d7cf;
     font-size: 1.2em;
 }
 
 /* Top Cover */
 .top-cover {
     position: relative;
-    top: 60px;
+    top: 0;
     left: 0;
     width: 100%;
-    height: calc(100vh - 60px);
+    height: 100vh;
+    padding: 100px 10px;
     background-image: url('');
     text-align: center;
     background-size: cover;
     background-position: center;
+
 }
 
-.top-cover .description {
+.top-cover .background {
     position: relative;
-    top: 50%;
-    width: 100%;
-    transform: translateY(-50%);
-    text-align: right;
-    background: linear-gradient(90deg, rgba(238, 245, 219, 0) 0%, rgba(238, 245, 219, 1) 100%);
-    padding: 1em 15%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    top: 0;
+    text-align: left;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.top-cover h1 {
+.top-cover .information {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    padding-right: 5%;
+    padding-left: 2em;
+    text-align: right;
+    transform: translateY(-50%);
+    background-color: #729fcf;
+    opacity: 0.8;
+    color: #555753;
+}
+
+.top-cover .information h1 {
     font-size: 5em;
 }
 
-.top-cover h2 {
-    font-size: 2em;
+.top-cover .information h2 {
+    font-size: 3em;
 }
 
 .top-cover p {
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 /* Gallery */
@@ -133,6 +138,7 @@ body {
 .gallery-grid li {
     list-style-type: none;
     width: 25%;
+    min-width: 250px;
     cursor: pointer;
     margin: 1em;
 }
@@ -142,6 +148,13 @@ body {
     transition: transform 0.5s;
 }
 
+.gallery-item {
+    position: relative;
+    padding: 10px;
+    background-color: #729fcf;
+    border-radius: 2%;
+}
+
 .gallery-item img {
     width: 100%;
     height: auto;
@@ -149,7 +162,49 @@ body {
 
 .gallery-item figcaption {
     text-align: center;
+    color: black;
     font-size: 1.5em;
+}
+
+/* Popup container */
+.popup {
+    display: none;
+    /* Hide popup by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    overflow: auto;
+}
+
+/* Popup content */
+.popup-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* Center popup vertically and horizontally */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
@@ -162,7 +217,16 @@ body {
         font-size: 1.5em;
     }
 
-    .top-cover h1 {
+    .top-cover .information h1 {
         font-size: 3em;
     }
+
+    .top-cover .information h2 {
+        font-size: 1.5em;
+    }
+
+    .top-cover p {
+        font-size: 1em;
+    }
+
 }
