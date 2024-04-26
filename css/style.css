@@ -166,8 +166,8 @@ body {
 
 .gallery-grid li {
     list-style-type: none;
-    width: 25%;
-    min-width: 250px;
+    width: 20%;
+    min-width: 100px;
     cursor: pointer;
     margin: 1em;
 }
@@ -198,7 +198,6 @@ body {
 /* Popup container */
 .popup {
     display: none;
-    /* Hide popup by default */
     position: fixed;
     z-index: 1;
     left: 0;
@@ -206,7 +205,6 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    /* Semi-transparent background */
     overflow: auto;
 }
 
@@ -230,7 +228,7 @@ body {
 }
 
 .popup-content img {
-    width: 100%;
+    width: 10%;
     height: auto;
 }
 

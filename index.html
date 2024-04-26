@@ -78,90 +78,7 @@
                 <h1><i class="fa-solid fa-code"></i>&nbsp;Skills</h1>
             </div>
             <div class="gallery">
-                <ul class="gallery-grid">
-                    <li class="gallery-item" id="cpp">
-                        <img src="figures/programming-background-with-html-text.jpg" alt="Programming">
-                        <figcaption>C++</figcaption>
-                    </li>
-                    <div class="popup" id="cpp-popup">
-                        <div class="popup-content">
-                            <span class="cross" id="cross">&times;</span>
-                            <img src="figures/programming-background-with-html-text.jpg" alt="Programming">
-                            <h2>Popup Content</h2>
-                            <p>This is a popup window!</p>
-                            <button class="btn btn-lg btn-primary pull-right" id="close">Close</button>
-                        </div>
-                    </div>
-
-                    <li class="gallery-item" id="python">
-                        <img src="figures/programming-background-with-html-text.jpg" alt="Programming">
-                        <figcaption>Python</figcaption>
-                    </li>
-                    <div class="popup" id="python-popup">
-                        <div class="popup-content">
-                            <span class="cross" id="close">&times;</span>
-                            <img src="figures/programming-background-with-html-text.jpg" alt="Programming">
-                            <h2>Popup Content</h2>
-                            <p>This is a popup window!</p>
-                            <button class="btn btn-lg btn-primary pull-right" id="close">Close</button>
-                        </div>
-                    </div>
-
-                    <li class="gallery-item" id="javascript">
-                        <img src="figures/programming-background-with-html-text.jpg" alt="Programming">
-                        <figcaption>JavaScript</figcaption>
-                    </li>
-                    <div class="popup" id="javascript-popup">
-                        <div class="popup-content">
-                            <span class="cross" id="close">&times;</span>
-                            <img src="figures/programming-background-with-html-text.jpg" alt="Programming">
-                            <h2>Popup Content</h2>
-                            <p>This is a popup window!</p>
-                            <button class="btn btn-lg btn-primary pull-right" id="close">Close</button>
-                        </div>
-                    </div>
-
-                    <li class="gallery-item" id="opencv">
-                        <img src="figures/programming-background-with-html-text.jpg" alt="Programming">
-                        <figcaption>OpenCV</figcaption>
-                    </li>
-                    <div class="popup" id="opencv-popup">
-                        <div class="popup-content">
-                            <span class="cross" id="cross">&times;</span>
-                            <img src="figures/programming-background-with-html-text.jpg" alt="Programming">
-                            <h2>Popup Content</h2>
-                            <p>This is a popup window!</p>
-                            <button class="btn btn-lg btn-primary pull-right" id="close">Close</button>
-                        </div>
-                    </div>
-
-                    <li class="gallery-item" id="cudasdk">
-                        <img src="figures/programming-background-with-html-text.jpg" alt="Programming">
-                        <figcaption>CUDA SDK</figcaption>
-                    </li>
-                    <div class="popup" id="cudasdk-popup">
-                        <div class="popup-content">
-                            <span class="cross" id="cross">&times;</span>
-                            <img src="figures/programming-background-with-html-text.jpg" alt="Programming">
-                            <h2>Popup Content</h2>
-                            <p>This is a popup window!</p>
-                            <button class="btn btn-lg btn-primary pull-right" id="close">Close</button>
-                        </div>
-                    </div>
-
-                    <li class="gallery-item" id="grpc">
-                        <img src="figures/programming-background-with-html-text.jpg" alt="Programming">
-                        <figcaption>gRPC</figcaption>
-                    </li>
-                    <div class="popup" id="grpc-popup">
-                        <div class="popup-content">
-                            <span class="cross" id="cross">&times;</span>
-                            <img src="figures/programming-background-with-html-text.jpg" alt="Programming">
-                            <h2>Popup Content</h2>
-                            <p>This is a popup window!</p>
-                            <button class="btn btn-lg btn-primary pull-right" id="close">Close</button>
-                        </div>
-                    </div>
+                <ul class="gallery-grid" id="gallery-grid">
                 </ul>
             </div>
         </div>
@@ -203,24 +120,8 @@
     <script src="js/jquery-3.7.1.slim.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/typing-effect.js"></script>
+    <script src="js/gallery.js"></script>
     <script>
-
-        $(document).ready(function () {
-            var galleryItems = ['cpp', 'python', 'javascript', 'opencv', 'cudasdk', 'grpc'];
-            galleryItems.forEach(function (item) {
-                var popup = $('#' + item + '-popup');
-                $('#' + item).click(function () {
-                    popup.show();
-                });
-                popup.find('#cross').click(function () {
-                    popup.hide();
-                });
-                popup.find('#close').click(function () {
-                    popup.hide();
-                });
-            });
-        });
-
         typeBackground();
     </script>
 </body>
