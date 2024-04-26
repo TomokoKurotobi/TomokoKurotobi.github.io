@@ -184,27 +184,64 @@ body {
 /* Popup content */
 .popup-content {
     background-color: #fefefe;
-    margin: 15% auto;
-    /* Center popup vertically and horizontally */
-    padding: 20px;
+    margin: 10% auto;
+    padding: 1px 20px;
     border: 1px solid #888;
-    width: 80%;
+    border-radius: 1%;
+    width: 70%;
+    min-height: 80%;
     max-width: 600px;
+    display: block;
 }
 
-/* Close button */
-.close {
+.popup-content img {
+    width: 100%;
+    height: auto;
+}
+
+.popup-content figcaption {
+    text-align: center;
+    color: #555753;
+    font-size: 1.5em;
+}
+
+.popup-content h2 {
+    text-align: center;
+    color: #555753;
+    font-size: 2em;
+}
+
+.popup-content p {
+    font-size: 1.2em;
+    color: #555753;
+}
+
+/* Cross button */
+.cross {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
-    color: black;
+.cross:hover,
+.cross:focus {
+    color: #555753;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* Close button */
+.close {
+    color: white;
+    background-color: #4e9a06;
+    float: right;
+    font-size: 1em;
+    border: 0px;
+    border-radius: 0.5em;
+    box-shadow: none;
+    border-color: #4e9a06;
+    padding: 2%;
 }
 
 @media screen and (max-width: 768px) {

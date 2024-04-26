@@ -68,10 +68,11 @@
                     </li>
                     <div class="popup" id="cpp-popup">
                         <div class="popup-content">
-                            <span class="close" id="close">&times;</span>
+                            <span class="cross" id="cross">&times;</span>
+                            <img src="figures/programming-background-with-html-text.jpg" alt="Programming">
                             <h2>Popup Content</h2>
                             <p>This is a popup window!</p>
-                            <button id="close">Close</button>
+                            <button class="close" id="close">Close</button>
                         </div>
                     </div>
 
@@ -81,9 +82,11 @@
                     </li>
                     <div class="popup" id="python-popup">
                         <div class="popup-content">
-                            <span class="close" id="close">&times;</span>
+                            <span class="cross" id="close">&times;</span>
+                            <img src="figures/programming-background-with-html-text.jpg" alt="Programming">
                             <h2>Popup Content</h2>
                             <p>This is a popup window!</p>
+                            <button class="close" id="close">Close</button>
                         </div>
                     </div>
 
@@ -93,9 +96,11 @@
                     </li>
                     <div class="popup" id="javascript-popup">
                         <div class="popup-content">
-                            <span class="close" id="close">&times;</span>
+                            <span class="cross" id="close">&times;</span>
+                            <img src="figures/programming-background-with-html-text.jpg" alt="Programming">
                             <h2>Popup Content</h2>
                             <p>This is a popup window!</p>
+                            <button class="close" id="close">Close</button>
                         </div>
                     </div>
 
@@ -103,11 +108,13 @@
                         <img src="figures/programming-background-with-html-text.jpg" alt="Programming">
                         <figcaption>OpenCV</figcaption>
                     </li>
-                    <div class="popup" id="opencv">
+                    <div class="popup" id="opencv-popup">
                         <div class="popup-content">
-                            <span class="close" id="close">&times;</span>
+                            <span class="cross" id="cross">&times;</span>
+                            <img src="figures/programming-background-with-html-text.jpg" alt="Programming">
                             <h2>Popup Content</h2>
                             <p>This is a popup window!</p>
+                            <button class="close" id="close">Close</button>
                         </div>
                     </div>
 
@@ -117,9 +124,11 @@
                     </li>
                     <div class="popup" id="cudasdk-popup">
                         <div class="popup-content">
-                            <span class="close" id="close">&times;</span>
+                            <span class="cross" id="cross">&times;</span>
+                            <img src="figures/programming-background-with-html-text.jpg" alt="Programming">
                             <h2>Popup Content</h2>
                             <p>This is a popup window!</p>
+                            <button class="close" id="close">Close</button>
                         </div>
                     </div>
 
@@ -129,9 +138,11 @@
                     </li>
                     <div class="popup" id="grpc-popup">
                         <div class="popup-content">
-                            <span class="close" id="close">&times;</span>
+                            <span class="cross" id="cross">&times;</span>
+                            <img src="figures/programming-background-with-html-text.jpg" alt="Programming">
                             <h2>Popup Content</h2>
                             <p>This is a popup window!</p>
+                            <button class="close" id="close">Close</button>
                         </div>
                     </div>
                 </ul>
@@ -145,19 +156,20 @@
     <script src="js/typing-effect.js"></script>
     <script>
 
-        document.addEventListener('DOMContentLoaded', function () {
+        $(document).ready(function () {
             var galleryItems = ['cpp', 'python', 'javascript', 'opencv', 'cudasdk', 'grpc'];
             galleryItems.forEach(function (item) {
-                var popup = document.getElementById(item + '-popup');
-                popup.getElementsByClassName('close')[0].addEventListener('click', function () {
-                    popup.style.display = 'none';
+                var popup = $('#' + item + '-popup');
+                $('#' + item).click(function () {
+                    popup.show();
                 });
-
-                document.getElementById(item).addEventListener('click', function () {
-                    popup.style.display = 'block';
+                popup.find('#cross').click(function () {
+                    popup.hide();
+                });
+                popup.find('#close').click(function () {
+                    popup.hide();
                 });
             });
-
         });
 
         runTypingEffects();
