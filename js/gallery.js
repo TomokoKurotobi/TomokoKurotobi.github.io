@@ -147,6 +147,8 @@ var items = [
   }
 ];
 
+// Define gallery grid items
+
 function createGalleryItem(id, src, alt, caption) {
   let galleryItem = document.createElement('li');
   galleryItem.className = 'gallery-item';
@@ -164,6 +166,18 @@ function createGalleryItem(id, src, alt, caption) {
 
   return galleryItem;
 }
+
+function createGallery() {
+  let gallery = document.getElementById('gallery-grid');
+  for (let i = 0; i < items.length; i++) {
+    let item = items[i];
+    let galleryItem =
+        createGalleryItem(item.id, item.src, item.alt, item.caption);
+    gallery.appendChild(galleryItem);
+  }
+}
+
+// Define gallery popups
 
 function createPopup(id, src, alt, heading, text) {
   let popup = document.createElement('div');
@@ -201,91 +215,101 @@ function createPopup(id, src, alt, heading, text) {
   return popup;
 }
 
-function createGallery() {
-  let gallery = document.getElementById('gallery-grid');
-  for (let i = 0; i < items.length; i++) {
-    let item = items[i];
-    let galleryItem =
-        createGalleryItem(item.id, item.src, item.alt, item.caption);
-    gallery.appendChild(galleryItem);
-    // let popup =
-    //     createPopup(item.id, item.src, item.alt, item.heading, item.text);
-    // gallery.appendChild(popup);
-    // let buttons = createPopupButtons();
-    // popup.appendChild(buttons);
-  }
-}
-
-
-function createPopupButtons() {
-  let buttons = document.createElement('div');
-  buttons.className = 'buttons';
-
-  let cross = document.createElement('div');
-  cross.className = 'fa-solid fa-xmark btn-cross';
-  cross.id = 'cross';
-
-  let prv = document.createElement('div');
-  prv.className = 'fa-solid fa-chevron-left btn-prv';
-  prv.id = 'prv';
-
-  let nxt = document.createElement('div');
-  nxt.className = 'fa-solid fa-chevron-right btn-nxt';
-  nxt.id = 'nxt';
-
-  buttons.appendChild(cross);
-  buttons.appendChild(prv);
-  buttons.appendChild(nxt);
-  return buttons;
-}
-
 function createGalleryPopups() {
+  // Gallery popups (display control)
   let popups = document.getElementById('gallery-popups');
+  popups.className = 'gallery-popups';
+
+  // Carousel
+  let carousel = document.createElement('div');
+  carousel.className = 'carousel slide cover-all';
+  carousel.id = 'gallery-carousel';
+  carousel.setAttribute('data-bs-interval', 'false');
+  carousel.setAttribute('data-ride', 'carousel');
+
+  // Carousel inner to hold items
+  let carouselInner = document.createElement('div');
+  carouselInner.className = 'carousel-inner cover-all';
   for (let i = 0; i < items.length; i++) {
     let item = items[i];
+    let carouselItem = document.createElement('div');
+    carouselItem.className = 'carousel-item cover-all';
+    if (i == 0) {
+      carouselItem.className += ' active';  // Set first item as active
+    }
+    carouselItem.id = item.id + '-popup';
     let popup =
         createPopup(item.id, item.src, item.alt, item.heading, item.text);
-    popups.appendChild(popup);
-    let buttons = createPopupButtons();
-    popup.appendChild(buttons);
+    carouselItem.appendChild(popup);
+    carouselInner.appendChild(carouselItem);
   }
+
+  carousel.appendChild(carouselInner);
+
+  // Carousel controls
+  let prev = document.createElement('button');
+  prev.className = 'carousel-control-prev';
+  prev.type = 'button';
+  prev.id = 'carousel-control-prev'
+  prev.setAttribute('data-bs-target', '#gallery-carousel');
+  prev.setAttribute('data-bs-slide', 'prev');
+  prev.innerHTML =
+      '<span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span>';
+
+  let next = document.createElement('button');
+  next.className = 'carousel-control-next';
+  next.id = 'carousel-control-next'
+  next.type = 'button';
+  next.setAttribute('data-bs-target', '#gallery-carousel');
+  next.setAttribute('data-bs-slide', 'next');
+  next.innerHTML =
+      '<span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span>';
+
+  carousel.appendChild(prev);
+  carousel.appendChild(next);
+
+  popups.appendChild(carousel);
 }
 
 createGallery();
 createGalleryPopups();
 
+var popups = document.getElementById('gallery-popups');
+
+function closePopup() {
+  popups.style.display = 'none';
+}
+
+function openPopup() {
+  popups.style.display = 'block';
+}
+
+function isPopupOpen() {
+  return popups.style.display == 'block';
+}
+
 $(document).ready(function() {
-  items.forEach(function(item, index) {
+  items.forEach(function(item) {
     var popup = $('#' + item.id + '-popup');
     $('#' + item.id).click(function(e) {
-      e.stopPropagation();
-      popup.css('opacity', 0);
-      popup.css('display', 'block');
-      popup.animate({opacity: 1}, 500);
+      e.stopPropagation();  // Stop event bubbling
+      var activePopup = $('.carousel-item.active');
+      activePopup.removeClass('active');
+      popup.addClass('active');
+      openPopup();
     });
     popup.find('#close').click(function() {
-      popup.hide();
+      closePopup();
     });
-    popup.find('#cross').click(function() {
-      popup.hide();
-    });
-    popup.find('#prv').click(function() {
-      popup.hide();
-      var prevIndex = (index - 1 + items.length) % items.length;
-      var prevPopup = $('#' + items[prevIndex].id + '-popup');
-      // move from left to right
-      prevPopup.css('left', '-100%');
-      prevPopup.show();
-      prevPopup.animate({left: '0'}, 500);
-    });
-    popup.find('#nxt').click(function() {
-      popup.hide();
-      var nextIndex = (index + 1) % items.length;
-      var nextPopup = $('#' + items[nextIndex].id + '-popup');
-      // move from right to left
-      nextPopup.css('left', '100%');
-      nextPopup.show();
-      nextPopup.animate({left: '0'}, 500);
-    });
+  });
+
+  $(document).click(function(event) {
+    if (isPopupOpen()) {
+      if (!$(event.target).closest('.popup-content').length &&
+          !$(event.target).closest('#carousel-control-prev').length &&
+          !$(event.target).closest('#carousel-control-next').length) {
+        closePopup();
+      }
+    }
   });
 });

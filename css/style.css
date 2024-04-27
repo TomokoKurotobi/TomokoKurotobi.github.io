@@ -18,6 +18,8 @@ body {
     --bright-green: #8ae234;
     --cyan: #06989a;
 
+    --header-height: 100px;
+
 }
 
 /* Terminal colors */
@@ -93,6 +95,12 @@ p {
 
 .pull-left {
     float: left;
+}
+
+.vertical-center {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 /* Header */
@@ -212,6 +220,7 @@ p {
 
 
 /* Gallery */
+
 .gallery h1 {
     text-align: center;
 }
@@ -267,52 +276,34 @@ p {
 }
 
 /* Popup container */
-.popup {
+
+.gallery-popups {
     display: none;
     position: fixed;
     z-index: 1;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
-    /* background-color: rgba(0, 0, 0, 0.5); */
-    overflow: auto;
+    width: 100vw;
+    height: 100vh;
 }
 
-.btn-prv,
-.btn-nxt,
-.btn-cross {
+.gallery-popups .cover-all {
     position: fixed;
-
-    background-color: var(--dark-grey);
-    color: var(--white);
-    opacity: 0.8;
-    border-style: none;
-
-    font-size: 3em;
-    font-weight: bold;
-    cursor: pointer;
-
-    margin: 1em;
-    padding: 10px 20px;
-    z-index: 2;
-}
-
-.popup .btn-prv {
-    top: 50%;
-    transform: translateY(-50%);
+    z-index: 1;
     left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
-.popup .btn-nxt {
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0;
-}
-
-.popup .btn-cross {
+.gallery-popups .popup {
+    position: fixed;
     top: 10%;
-    right: 0;
+    left: 10%;
+    right: 10%;
+    bottom: 10%;
+    overflow: auto;
 }
 
 /* Popup content */
@@ -354,20 +345,9 @@ p {
     color: var(--light-grey);
 }
 
-/* Cross button */
-.cross {
-    color: var(--white);
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
 
-.cross:hover,
-.cross:focus {
-    color: var(--light-grey);
-    text-decoration: none;
-    cursor: pointer;
-}
+
+/* Contact */
 
 .contact {
     max-width: 500px;
