@@ -36,6 +36,7 @@
                         <div class="navbar-nav pull-right">
                             <a class="nav-link" href="index.html#about">About</a>
                             <a class="nav-link" href="index.html#skills">Skill</a>
+                            <a class="nav-link" href="index.html#history">History</a>
                             <a class="nav-link" href="index.html#contact">Contact</a>
                         </div>
                     </div>
@@ -112,7 +113,16 @@
         </div>
     </section>
 
-    <section id="contact" class="page-section bg-light-grey">
+    <section id="history" class="page-section bg-light-grey">
+        <div class="container">
+            <div class="heading">
+                <h1><i class="fa-solid fa-briefcase"></i>&nbsp;History</h1>
+            </div>
+            <div id="history-contents"> </div>
+        </div>
+    </section>
+
+    <section id="contact" class="page-section">
         <div class="container">
             <div class="heading">
                 <h1><i class="fa-solid fa-envelope"></i>&nbsp;Contact</h1>
@@ -145,9 +155,8 @@
     <script src="js/typing-effect.js"></script>
     <script src="js/gallery.js"></script>
     <script>
-        typeBackground();
-
         $(document).ready(function () {
+            typeBackground();
             $('.navbar-toggler').click(function () {
                 $(this).find('.fa-bars, .fa-times').toggle();
             });
