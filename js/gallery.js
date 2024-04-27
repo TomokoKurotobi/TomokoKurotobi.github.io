@@ -1,6 +1,6 @@
 
 
-var items = [
+var galleryItems = [
   {
     id: 'cpp',
     src: 'figures/C++_Logo.png',
@@ -167,10 +167,10 @@ function createGalleryItem(id, src, alt, caption) {
   return galleryItem;
 }
 
-function createGallery() {
-  let gallery = document.getElementById('gallery-grid');
-  for (let i = 0; i < items.length; i++) {
-    let item = items[i];
+function createGallery(attachTo) {
+  let gallery = document.getElementById(attachTo);
+  for (let i = 0; i < galleryItems.length; i++) {
+    let item = galleryItems[i];
     let galleryItem =
         createGalleryItem(item.id, item.src, item.alt, item.caption);
     gallery.appendChild(galleryItem);
@@ -215,9 +215,9 @@ function createPopup(id, src, alt, heading, text) {
   return popup;
 }
 
-function createGalleryPopups() {
+function createGalleryPopups(attachTo) {
   // Gallery popups (display control)
-  let popups = document.getElementById('gallery-popups');
+  let popups = document.getElementById(attachTo);
   popups.className = 'gallery-popups';
 
   // Carousel
@@ -230,8 +230,8 @@ function createGalleryPopups() {
   // Carousel inner to hold items
   let carouselInner = document.createElement('div');
   carouselInner.className = 'carousel-inner cover-all';
-  for (let i = 0; i < items.length; i++) {
-    let item = items[i];
+  for (let i = 0; i < galleryItems.length; i++) {
+    let item = galleryItems[i];
     let carouselItem = document.createElement('div');
     carouselItem.className = 'carousel-item cover-all';
     if (i == 0) {
@@ -271,8 +271,8 @@ function createGalleryPopups() {
   popups.appendChild(carousel);
 }
 
-createGallery();
-createGalleryPopups();
+createGallery('gallery-grid');          // Pass id to attach gallery grid
+createGalleryPopups('gallery-popups');  // Pass id to attach gallery popups
 
 var popups = document.getElementById('gallery-popups');
 
@@ -289,7 +289,7 @@ function isPopupOpen() {
 }
 
 $(document).ready(function() {
-  items.forEach(function(item) {
+  galleryItems.forEach(function(item) {
     var popup = $('#' + item.id + '-popup');
     $('#' + item.id).click(function(e) {
       e.stopPropagation();  // Stop event bubbling
