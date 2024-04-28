@@ -79,14 +79,19 @@ p {
     font-size: 1.3em;
 }
 
+a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
 .btn {
     margin: 1em 0;
-    background-color: var(--cyan);
+    background-color: var(--blue);
     border-style: none;
 }
 
 .btn:hover {
-    background-color: var(--blue);
+    background-color: var(--cyan);
 }
 
 .pull-right {
@@ -185,9 +190,9 @@ p {
     padding-left: 2em;
     text-align: right;
     transform: translateY(-50%);
-    background-color: var(--blue);
+    background-color: var(--green);
     opacity: 0.8;
-    color: black;
+    color: var(--grey);
 }
 
 .top-cover .information h1 {
@@ -203,16 +208,12 @@ p {
     padding: 5% 0;
 }
 
-.heading h2 {
+.heading h3 {
     text-align: center;
     padding: 5% 0;
 }
 
 /* About Me */
-.about-me a {
-    padding: 5% 0;
-    color: var(--cyan);
-}
 
 .about-me h1 {
     text-align: center;
@@ -266,17 +267,26 @@ p {
     height: auto;
 }
 
-.gallery-item figcaption {
+.gallery-item .color-overlay {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     width: 100%;
-    background-color: var(--bright-green);
-    opacity: 0.8;
+    height: 100%;
+    overflow: hidden;
+    /* background-color: rgba(114, 159, 207, 0.7); */
+}
+
+.gallery-item .color-overlay figcaption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    color: var(--dark-grey);
-    font-size: 1.5em;
-    overflow-wrap: break-word;
+    color: white;
+    font-size: 1.8em;
+    max-width: 90%;
+    word-wrap: break-word;
 }
 
 /* Popup container */
@@ -314,7 +324,7 @@ p {
 .popup-content {
     position: relative;
     background-color: #fefefe;
-    padding: 1px 20px;
+    padding: 10px 20px;
     border: 1px solid #888;
     border-radius: 1%;
     top: 50%;
@@ -402,8 +412,8 @@ p {
         font-size: 1.5em;
     }
 
-    .gallery-item figcaption {
-        font-size: 1em;
+    .gallery-item .color-overlay figcaption {
+        font-size: 1.2em;
     }
 
     .popup-content {

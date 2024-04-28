@@ -2,6 +2,7 @@ var historyItems = [
   {
     id: 'pulsemedica',
     company: 'PulseMedica Corp.',
+    website: 'https://www.pulsemedica.com/',
     position: 'Software Developer',
     department: '',
     startDate: 'December, 2020',
@@ -12,6 +13,7 @@ var historyItems = [
   {
     id: 'nissan',
     company: 'Nissan Motor Co., Ltd.',
+    website: 'https://www.nissan-global.com/EN/',
     position: 'Research Engineer',
     department: 'Research and Development',
     startDate: 'April, 2013',
@@ -22,6 +24,7 @@ var historyItems = [
   {
     id: 'utokyo-master',
     company: 'The university of Tokyo',
+    website: 'https://www.u-tokyo.ac.jp/en/',
     position: 'Master Student',
     department: 'Graduate School of Information Science and Technology',
     startDate: 'April, 2011',
@@ -31,6 +34,8 @@ var historyItems = [
   {
     id: 'utokyo-bachelor',
     company: 'The university of Tokyo',
+    website: 'https://www.u-tokyo.ac.jp/en/',
+
     position: 'Undergraduate Student',
     department: 'Faculty of Engineering',
     startDate: 'April, 2007',
@@ -40,7 +45,8 @@ var historyItems = [
 ];
 
 function createHistoryItem(
-    id, company, position, department, startDate, endDate, description) {
+    id, company, website, position, department, startDate, endDate,
+    description) {
   let historyItem = document.createElement('div');
   historyItem.className = 'row history-item wow fadeInUp';
   historyItem.id = id;
@@ -56,7 +62,8 @@ function createHistoryItem(
 
   let companyElement = document.createElement('h3');
   companyElement.className = 'company';
-  companyElement.innerHTML = company;
+  companyElement.innerHTML =
+      '<a href="' + website + '" target="_blank">' + company + '</a>';
 
   let positionElement = document.createElement('h4');
   positionElement.className = 'position';
@@ -114,8 +121,8 @@ function createHistoryDiagram(attachTo) {
   for (let i = 0; i < historyItems.length; i++) {
     let item = historyItems[i];
     let historyItem = createHistoryItem(
-        item.id, item.company, item.position, item.department, item.startDate,
-        item.endDate, item.description);
+        item.id, item.company, item.website, item.position, item.department,
+        item.startDate, item.endDate, item.description);
     history.appendChild(historyItem);
   }
 }
