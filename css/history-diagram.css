@@ -1,0 +1,30 @@
+.history-item {
+    margin: 0 10%;
+    padding: 0px 5%;
+}
+
+.trail {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trail .dot {
+    font-size: 2em;
+    color: var(--blue);
+}
+
+.trail .line {
+    width: 2px;
+    height: 100%;
+    background-color: var(--blue);
+}
+
+@media screen and (max-width: 768px) {
+    .history-item {
+        margin: 0 10px;
+        padding: 0 10px;
+    }
+
+}

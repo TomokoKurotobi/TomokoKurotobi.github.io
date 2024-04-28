@@ -151,7 +151,7 @@ var galleryItems = [
 
 function createGalleryItem(id, src, alt, caption) {
   let galleryItem = document.createElement('li');
-  galleryItem.className = 'gallery-item';
+  galleryItem.className = 'gallery-item wow fadeInUp';
   galleryItem.id = id;
 
   let image = document.createElement('img');

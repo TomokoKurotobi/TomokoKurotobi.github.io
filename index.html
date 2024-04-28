@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/history-diagram.css">
 </head>
 
 <body>
@@ -47,8 +48,8 @@
 
     <!-- HOME -->
     <section id="home" class="top-cover">
-        <div class="background">
-            <p id="terminal-contents"></p>
+        <div class="background clip-overflow">
+            <p id="terminal-contents" class="clip-overflow"></p>
         </div>
         <div class="information">
             <h1>Tomoko Kurotobi</h1>
@@ -61,7 +62,7 @@
             <div class="heading">
                 <h1><i class="fa-solid fa-user"></i>&nbsp;About Me</h1>
             </div>
-            <div class="about-me">
+            <div class="about-me wow fadeInUp">
                 <p style="text-align: justify;">
                     Welcome to my website! With over 9 years of industry experience, I've dived deeply into the
                     world of software development, mastering a seriese of computer languages
@@ -152,10 +153,12 @@
 
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/typing-effect.js"></script>
     <script src="js/gallery.js"></script>
     <script src="js/history-diagram.js"></script>
     <script>
+        new WOW().init();
         $(document).ready(function () {
             typeBackground();
             $('.navbar-toggler').click(function () {
