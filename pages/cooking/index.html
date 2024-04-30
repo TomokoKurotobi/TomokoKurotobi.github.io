@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+
+<body class="body-hobby">
+    <!-- HEADER -->
+    <header id="header" class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="index.html#home"><i class='fa fa-home'></i></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#about">Jurney</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#dishes">Dishes</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HOME -->
+    <section id="home" class="top-cover">
+        <div class="description">
+            <h1>Welcome to Tomoko's cooking page</h1>
+        </div>
+    </section>
+
+    <section id="about" class="page-section">
+        <div class="container">
+            <div class="heading">
+                <h1>Discover My Culinary Journey</h1>
+            </div>
+            <div>
+                <p>
+                    Cooking is more than just a hobby for me—it's a passion that I've cultivated over the years. My
+                    culinary adventure began when I enrolled in a culinary art school for six months,
+                    immersing myself in the art of cooking. During my time there, I delved into the intricacies of
+                    various cuisines, from the refined flavors of French cuisine to the bold spices of Indian dishes.
+                </p>
+                <p>
+                    One aspect of cooking that truly captivated me was sharpening my knife skills to perfection. I found
+                    joy in meticulously cutting ingredients to ensure uniformity and enhance the overall quality of my
+                    creations. Moreover, I developed a keen eye for presentation, reveling in the opportunity to
+                    artfully arrange dishes that not only delighted the palate but also pleased the eye. </p>
+            </div>
+    </section>
+
+    <section id="dishes" class="page-section">
+        <div class="container">
+            <div class="heading">
+                <h1>My Dishes</h1>
+            </div>
+            <div class="gallery">
+                <ul class="gallery-grid" id="gallery-grid"></ul>
+                <div id="gallery-popups"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="../../js/jquery-3.7.1.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"
+        integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../../js/wow.min.js"></script>
+    <script src="js/gallery.js"></script>
+
+    <script>
+        new WOW().init();
+        $(document).ready(function () {
+            $('.navbar-toggler').click(function () {
+                $(this).find('.fa-bars, .fa-times').toggle();
+            });
+
+            var animation = bodymovin.loadAnimation({
+                container: document.getElementById('home'),
+                path: 'figures/Animation - 1714490458523.json',
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                name: "Demo Animation",
+            });
+        });
+    </script>
+</body>
+
+</html>
