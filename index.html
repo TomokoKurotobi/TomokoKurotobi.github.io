@@ -153,8 +153,13 @@
         </div>
     </section>
 
+    <section id="animation-container" class="bg-light-grey"></section>
+
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"
+        integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/typing-effect.js"></script>
     <script src="js/gallery.js"></script>
@@ -165,6 +170,15 @@
             typeBackground();
             $('.navbar-toggler').click(function () {
                 $(this).find('.fa-bars, .fa-times').toggle();
+            });
+
+            var animation = bodymovin.loadAnimation({
+                container: document.getElementById('animation-container'),
+                path: 'figures/Animation - 1714436099627.json',
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                name: "Demo Animation",
             });
         });
     </script>
