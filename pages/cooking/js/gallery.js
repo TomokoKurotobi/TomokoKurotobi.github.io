@@ -1,16 +1,29 @@
 
-var galleryItems = [];
+var galleryItems = [
+  // {
+  //   id: 'gallery-item-1',
+  //   src: './figures/gallery/1.jpg',
+  //   alt: 'Image 1',
+  //   caption: 'Image 1',
+  //   heading: 'Image 1',
+  //   text: 'Image 1'
+  // }
+];
 const folder = './figures/gallery';
+
 
 function fillArray(fileNames) {
   fileNames.forEach((fileName, index) => {
-    let id = 'gallery-item-' + (index + 1).toString();
-    let src = fileName;
-    let alt = '';
-    let caption = '';
-    let heading = '';
-    let text = '';
-    galleryItems.push({id, src, alt, caption, heading, text});
+    let item = {
+      id: 'gallery-item-' + (index + 1).toString(),
+      src: fileName,
+      alt: '',
+      caption: '',
+      heading: '',
+      text: ''
+    };
+
+    galleryItems.push(item);
   });
 }
 
@@ -76,30 +89,11 @@ function createPopup(id, src, alt, heading, text) {
   let popupContent = document.createElement('div');
   popupContent.className = 'popup-content';
 
-  let h2 = document.createElement('h2');
-
   let image = document.createElement('img');
   image.src = src;
   image.alt = alt;
-  h2.appendChild(image);
 
-  let textNode = document.createTextNode(heading);
-  if (heading == '') {
-    textNode = document.createTextNode(' Experience');
-  }
-  h2.appendChild(textNode);
-
-  let p = document.createElement('p');
-  p.textContent = text;
-
-  let button = document.createElement('button');
-  button.className = 'btn btn-lg btn-primary pull-right';
-  button.id = 'close';
-  button.textContent = 'Close';
-
-  popupContent.appendChild(h2);
-  popupContent.appendChild(p);
-  popupContent.appendChild(button);
+  popupContent.appendChild(image);
 
   popup.appendChild(popupContent);
 
@@ -134,7 +128,6 @@ function createGalleryPopups(attachTo) {
     carouselItem.appendChild(popup);
     carouselInner.appendChild(carouselItem);
   }
-
   carousel.appendChild(carouselInner);
 
   // Carousel controls
@@ -182,34 +175,37 @@ $(document).ready(function() {
       .then(function(files) {
         var jpgFiles = files;
         fillArray(jpgFiles);
+        // console.log(galleryItems)
         createGallery('gallery-grid');
         createGalleryPopups('gallery-popups');
+
+
+        galleryItems.forEach(function(item) {
+          var popup = $('#' + item.id + '-popup');
+          $('#' + item.id).click(function(e) {
+            // console.log(item.id + ' clicked')
+            e.stopPropagation();  // Stop event bubbling
+            var activePopup = $('.carousel-item.active');
+            activePopup.removeClass('active');
+            popup.addClass('active');
+            openPopup();
+          });
+          popup.find('#close').click(function() {
+            closePopup();
+          });
+        });
+
+        $(document).click(function(event) {
+          if (isPopupOpen()) {
+            if (!$(event.target).closest('.popup-content').length &&
+                !$(event.target).closest('#carousel-control-prev').length &&
+                !$(event.target).closest('#carousel-control-next').length) {
+              closePopup();
+            }
+          }
+        });
       })
       .catch(function(error) {
         console.error(error);
       });
-
-  galleryItems.forEach(function(item) {
-    var popup = $('#' + item.id + '-popup');
-    $('#' + item.id).click(function(e) {
-      e.stopPropagation();  // Stop event bubbling
-      var activePopup = $('.carousel-item.active');
-      activePopup.removeClass('active');
-      popup.addClass('active');
-      openPopup();
-    });
-    popup.find('#close').click(function() {
-      closePopup();
-    });
-  });
-
-  $(document).click(function(event) {
-    if (isPopupOpen()) {
-      if (!$(event.target).closest('.popup-content').length &&
-          !$(event.target).closest('#carousel-control-prev').length &&
-          !$(event.target).closest('#carousel-control-next').length) {
-        closePopup();
-      }
-    }
-  });
 });

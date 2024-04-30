@@ -58,9 +58,12 @@ a:hover {
 .btn {
     margin: 1em 0;
     border-style: none;
+    background-color: var(--orange);
 }
 
-.btn:hover {}
+.btn:hover {
+    color: var(--red);
+}
 
 .pull-right {
     float: right;
@@ -120,6 +123,11 @@ a:hover {
 .header i:hover,
 .navbar a:hover {
     color: var(--yellow);
+}
+
+.navbar-toggler {
+    background: transparent;
+    color: transparent;
 }
 
 .navbar-toggler .fa-bars {
