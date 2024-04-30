@@ -1,4 +1,5 @@
 /* Specialized css for the style of the website */
+
 body {
     /* Colors */
     --red: #D7263D;
@@ -12,7 +13,7 @@ body {
     --light-grey: #555753;
     --white: #FFFEF0;
 
-    font-family: bradley hand, 'cursive';
+    font-family: "Charm", cursive;
     padding: 0;
     margin: 0;
     background: var(--white);
@@ -58,9 +59,12 @@ a:hover {
 .btn {
     margin: 1em 0;
     border-style: none;
+    background-color: var(--orange);
 }
 
-.btn:hover {}
+.btn:hover {
+    color: var(--red);
+}
 
 .pull-right {
     float: right;
@@ -107,6 +111,10 @@ a:hover {
     text-align: right;
 }
 
+.navbar .navbar-brand {
+    font-family: 'courier';
+}
+
 .header i,
 .navbar,
 .navbar a {
@@ -120,6 +128,11 @@ a:hover {
 .header i:hover,
 .navbar a:hover {
     color: var(--yellow);
+}
+
+.navbar-toggler {
+    background: transparent;
+    color: transparent;
 }
 
 .navbar-toggler .fa-bars {

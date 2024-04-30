@@ -5,7 +5,8 @@
 }
 
 .gallery-grid {
-    margin: 0 auto;
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -48,7 +49,6 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    /* background-color: rgba(114, 159, 207, 0.7); */
 }
 
 .gallery-item .color-overlay figcaption {
@@ -85,56 +85,26 @@
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-.gallery-popups .popup {
+.gallery-popups img {
+    padding: 10px;
+    width: 100%;
+    height: 70%;
+    object-fit: contain;
     position: fixed;
-    top: 10%;
-    left: 10%;
-    right: 10%;
-    bottom: 10%;
-    overflow: auto;
-}
-
-/* Popup content */
-.popup-content {
-    position: relative;
-    background-color: #fefefe;
-    padding: 10px 20px;
-    border: 1px solid #888;
-    border-radius: 1%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 70%;
-    max-width: 600px;
-    height: 80%;
-    min-height: 200px;
-    max-height: 600px;
-    overflow: auto;
-    display: block;
 }
-
-.popup-content img {
-    width: 10%;
-    height: auto;
-}
-
-.popup-content figcaption {
-    text-align: center;
-    color: var(--light-grey);
-    font-size: 1.5em;
-}
-
-.popup-content h2 {
-    text-align: center;
-    color: var(--light-grey);
-}
-
-.popup-content p {
-    color: var(--light-grey);
-}
-
 
 @media screen and (max-width: 768px) {
+
+    .gallery-grid {
+        margin: 0;
+    }
+
+    .gallery-grid li {
+        margin: 5px;
+    }
 
     .gallery-item .color-overlay figcaption {
         font-size: 1.2em;
@@ -142,6 +112,10 @@
 
     .popup-content {
         width: 90%;
+    }
+
+    .gallery-popups img {
+        height: 80%;
     }
 
     .popup .btn-prv,
