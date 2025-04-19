@@ -1,71 +1,68 @@
 <!DOCTYPE html>
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
-<!--[if !IE]><!-->
 <html lang="en">
-<!--<![endif]-->
-
 <head>
     <meta charset="UTF-8">
     <title>TomokoKurotobi</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/history-diagram.css">
 </head>
 
 <body>
     <!-- HEADER -->
-    <section id="header" class="header bg-black">
+    <header class="header bg-dark fixed-top" id="header">
         <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container-fluid">
-                    <h1><a class="navbar-brand" href="index.html"><i class='fa fa-home'></i></a></h1>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon">
-                            <i class="fa-solid fa-bars"></i>
-                            <i class="fa-solid fa-times"></i>
-                        </span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div class="navbar-nav pull-right">
-                            <a class="nav-link" href="index.html#about">About</a>
-                            <a class="nav-link" href="index.html#skills">Skill</a>
-                            <a class="nav-link" href="index.html#history">History</a>
-                            <a class="nav-link" href="index.html#contact">Contact</a>
-                            <a class="nav-link" href="/pages/cooking/">Hobby</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
+        <nav class="navbar navbar-expand-lg navbar-dark" role="navigation">
+            <a href="#"><i class='fa fa-home'></i></a>
+            <button class="navbar-toggler" id="menu-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                </span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="main-nav">
+            <ul class="navbar-nav ms-auto text-end">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#skills">Skill</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#contact">Contact</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="/pages/cooking/">Hobby</a>
+                </li> -->
+            </ul>
+            </div>
+        </nav>
         </div>
-    </section>
+    </header>
 
     <!-- HOME -->
-    <section id="home" class="top-cover">
-        <div class="background">
-            <p id="terminal-contents"></p>
-        </div>
-        <div class="information">
-            <h1>Tomoko Kurotobi</h1>
-            <h2>Software Developer</h2>
+    <section id="home" class="p-0">
+        <div class="carousel-inner vh-100 w-100" style="position: relative;">
+            <div class="carousel-item active h-100">
+                <img src="figures/cover.png" alt="cover" class="d-block w-100 h-100" style="object-fit: cover;">
+                <div class="carousel-caption d-flex justify-content-center align-items-center flex-column">
+                    <h1>Tomoko Kurotobi</h1>
+                    <h4>Software Developer</h4>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="about" class="page-section  bg-light-grey">
+    <section id="about" class="bg-light">
         <div class="container">
-            <div class="heading">
-                <h1><i class="fa-solid fa-user"></i>&nbsp;About Me</h1>
+            <div class="heading text-center">
+                <h1><i class="fa-solid fa-user m-2"></i>About Me</h1>
             </div>
-            <div class="about-me wow fadeInUp">
-                <p style="text-align: justify;">
-                    Welcome to my website! With over 9 years of industry experience, I've dived deeply into the
+            <div class="about-me wow fadeInUp text-justify">
+                <p>
+                    Welcome to my website! With over 10 years of industry experience, I've dived deeply into the
                     world of software development, mastering a series of computer languages
                     and frameworks along the way. From crafting efficient algorithms in C++ to building dynamic web
                     applications with React.js and Electron, I've explored the full spectrum of programming
@@ -92,94 +89,86 @@
                     like-minded individuals. Since I am new to web development, I would greatly appreciate any advice
                     for further improvement!
                 </p>
-                <h1>
+                <h3 class="text-end">
                     <a href="https://www.linkedin.com/in/tomoko-kurotobi-a6b15b1b8/" class="social-link">
-                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-linkedin text-blue"></i>
                     </a>
                     <a href="https://github.com/TomokoKurotobi" class="social-link">
-                        <i class="fa-brands fa-github"></i>
+                        <i class="fa-brands fa-github text-blue"></i>
                     </a>
-                </h1>
+                </h3>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="page-section">
+    <section id="skills">
         <div class="container">
-            <div class="heading">
-                <h1><i class="fa-solid fa-code"></i>&nbsp;Skills</h1>
+            <div class="heading text-center">
+                <h1><i class="fa-solid fa-code m-2"></i>Skills</h1>
                 <h3>Please click the skill to see the details</h3>
             </div>
-            <div class="gallery">
-                <ul class="gallery-grid" id="gallery-grid"></ul>
-                <div id="gallery-popups"></div>
-            </div>
+            <div id="gallery-cards"></div>
+            <div id="gallery-popups"></div>
         </div>
     </section>
 
-    <section id="history" class="page-section bg-light-grey">
+    <section id="contact" class="bg-light">
         <div class="container">
-            <div class="heading">
-                <h1><i class="fa-solid fa-briefcase"></i>&nbsp;History</h1>
+            <div class="heading text-center">
+                <h1><i class="fa-solid fa-envelope m-2"></i>Contact</h1>
             </div>
-            <div id="history-diagram"> </div>
-        </div>
-    </section>
-
-    <section id="contact" class="page-section">
-        <div class="container">
-            <div class="heading">
-                <h1><i class="fa-solid fa-envelope"></i>&nbsp;Contact</h1>
-            </div>
-            <div class="contact">
+            <div class="col-lg-8 col-md-10 col-sm-12 col-xs-12 mx-auto">
                 <form method="post" action="https://formspree.io/f/xgegnnwo" id="contactfrm" role="form">
-                    <div>
-                        <p>Name *</p>
+                    <div class="p-1">
+                        <label for="message-name">Name *</label>
                         <input type="text" class="form-control" name="name" id="message-name"
                             placeholder="Please enter your name" title="Enter your name" required>
                     </div>
-                    <div>
-                        <p>Email</p>
+                    <div class="p-1">
+                        <label for="message-email">Email *</label>
                         <input type="email" class="form-control" name="email" id="message-email"
                             placeholder="Please enter email" title="Enter a valid email address">
                     </div>
-                    <div>
-                        <p>Message *</p>
-                        <textarea name="comment" class="form-control" id="message"
+                    <div class="p-1">
+                        <label for="message-subject">Subject *</label>
+                        <textarea name="comment" class="form-control" id="message" style="height: 200px;"
                             placeholder="Please enter your message…" title="Enter your message" required></textarea>
                     </div>
-                    <button name="submit" type="submit" class="btn btn-lg btn-primary pull-right"
-                        id="submit">Submit</button>
+                    <div class="d-flex justify-content-end p-1">
+                        <button name="submit" type="submit" class="btn btn-primary" id="submit">Submit</button>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
 
-    <section id="animation-container" class="bg-light-grey"></section>
+    <footer id="animation-container" class="bg-light"></footer>
 
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"
         integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="js/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/typing-effect.js"></script>
     <script src="js/gallery.js"></script>
-    <script src="js/history-diagram.js"></script>
     <script>
-        new WOW().init();
         $(document).ready(function () {
-            typeBackground();
-            $('.navbar-toggler').click(function () {
-                $(this).find('.fa-bars, .fa-times').toggle();
-            });
-
-            var animation = bodymovin.loadAnimation({
+            const animation = bodymovin.loadAnimation({
                 container: document.getElementById('animation-container'),
                 path: 'figures/Animation - 1714436099627.json',
                 renderer: 'svg',
                 loop: true,
                 autoplay: true,
                 name: "Demo Animation",
+            });
+            $('.navbar-collapse .nav-link').on('click', function(){
+                $('.navbar-collapse').collapse('hide');
+                $('#menu-toggle').removeClass('open');
+            });
+            $('#menu-toggle').on('click', function(){
+                $(this).toggleClass('open');
             });
         });
     </script>
