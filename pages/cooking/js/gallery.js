@@ -1,5 +1,5 @@
 
-var fileBaseNames = [
+const fileBaseNames = [
   'IMG_20200109_123759.jpg', 'IMG_20200109_131729.jpg',
   'IMG_20200110_130236.jpg', 'IMG_20200114_125757.jpg',
   'IMG_20200114_135029.jpg', 'IMG_20200115_123509.jpg',
@@ -94,19 +94,13 @@ function fetchFile(baseName) {
 // Define gallery grid items
 
 function createGalleryItem(id, src, alt, caption) {
-  let galleryItem = document.createElement('li');
-  galleryItem.className = 'gallery-item wow fadeInUp';
+  const galleryItem = document.createElement('li');
+  galleryItem.className = 'card border-0 shadow-sm col-lg-3 col-md-4 col-sm-6 col-xs-12';
   galleryItem.id = id;
 
-  let image = document.createElement('img');
-  image.src = src;
-  image.alt = alt;
-
-  let colorOverlay = document.createElement('div');
-  colorOverlay.className = 'color-overlay';
-
-  galleryItem.appendChild(image);
-  galleryItem.appendChild(colorOverlay);
+  galleryItem.innerHTML = `
+      <img src="${src}" class="card-img-top h-100 w-100 object-fit-cover rounded" alt="${alt}" >
+  `;
 
   return galleryItem;
 }
@@ -177,7 +171,7 @@ function createGalleryPopups(attachTo) {
   popups.appendChild(carousel);
 }
 
-var popups = document.getElementById('gallery-popups');
+const popups = document.getElementById('gallery-popups');
 
 function closePopup() {
   popups.style.display = 'none';

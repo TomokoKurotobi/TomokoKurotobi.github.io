@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
-<!--[if !IE]><!-->
 <html lang="en">
-<!--<![endif]-->
 
 <head>
     <meta charset="UTF-8">
@@ -24,31 +21,32 @@
 
 <body class="body-hobby">
     <!-- HEADER -->
-    <section id="header" class="header">
+    <header class="header bg-orange fixed-top" id="header">
         <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container-fluid">
-                    <h1><a class="navbar-brand" href="/"><i class='fa fa-home'></i></a></h1>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <i class="fa-solid fa-bars"></i>
-                        <i class="fa-solid fa-times"></i>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div class="navbar-nav pull-right">
-                            <a class="nav-link" href="index.html#about">Jurney</a>
-                            <a class="nav-link" href="index.html#dishes">Dishes</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
+        <nav class="navbar navbar-expand-lg navbar-dark" role="navigation">
+            <a href="/"><i class='fa fa-home'></i></a>
+            <button class="navbar-toggler" id="menu-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                </span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="main-nav">
+            <ul class="navbar-nav ms-auto text-end">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#dishes">Dishes</a>
+                </li>
+            </ul>
+            </div>
+        </nav>
         </div>
-    </section>
+    </header>
 
     <!-- HOME -->
-    <section id="home" class="top-cover">
-        <div class="description">
+    <section id="home" class="vh-100 w-100">
+        <div >
             <h1>Welcome to Tomoko's cooking page</h1>
         </div>
     </section>
@@ -97,11 +95,15 @@
     <script>
         new WOW().init();
         $(document).ready(function () {
-            $('.navbar-toggler').click(function () {
-                $(this).find('.fa-bars, .fa-times').toggle();
+            $('.navbar-collapse .nav-link').on('click', function(){
+                $('.navbar-collapse').collapse('hide');
+                $('#menu-toggle').removeClass('open');
+            });
+            $('#menu-toggle').on('click', function(){
+                $(this).toggleClass('open');
             });
 
-            var animation = bodymovin.loadAnimation({
+            const animation = bodymovin.loadAnimation({
                 container: document.getElementById('home'),
                 path: 'figures/Animation - 1714490458523.json',
                 renderer: 'svg',
