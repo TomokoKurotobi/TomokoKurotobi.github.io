@@ -94,10 +94,12 @@ function fetchFile(baseName) {
 // Define gallery grid items
 
 function createGalleryItem(id, src, alt, caption) {
-  const galleryItem = document.createElement('li');
-  galleryItem.className = 'card border-0 shadow-sm col-lg-3 col-md-4 col-sm-6 col-xs-12';
+  const galleryItem = document.createElement('div');
+  galleryItem.setAttribute('role', 'button');
+  galleryItem.className = 'card border-0 shadow-sm';
+  galleryItem.style.width = '8rem';
+  galleryItem.style.height = '8rem';
   galleryItem.id = id;
-
   galleryItem.innerHTML = `
       <img src="${src}" class="card-img-top h-100 w-100 object-fit-cover rounded" alt="${alt}" >
   `;
@@ -106,12 +108,11 @@ function createGalleryItem(id, src, alt, caption) {
 }
 
 function createGallery(attachTo) {
-  let gallery = document.getElementById(attachTo);
+  const gallery = document.getElementById(attachTo);
+  gallery.className = 'd-flex flex-wrap justify-content-center gap-2';
   for (let i = 0; i < galleryItems.length; i++) {
-    let item = galleryItems[i];
-    let galleryItem =
-        createGalleryItem(item.id, item.src, item.alt, item.caption);
-    gallery.appendChild(galleryItem);
+    const item = galleryItems[i];
+    gallery.appendChild(createGalleryItem(item.id, item.src, item.alt, item.caption));
   }
 }
 
