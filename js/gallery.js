@@ -173,7 +173,7 @@ function createGallery(attachTo) {
     galleryItem.className = 'card border-0 shadow-sm';
     galleryItem.style.width = '6rem';
     galleryItem.innerHTML = `
-      <div role="button" class="card-body" data-bs-toggle="modal" data-bs-target="#${item.id}-popup">
+      <div role="button" class="card-body d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#${item.id}-popup">
         <img src="${item.src}" class="card-img-top p-2" alt="${item.alt}">
       </div>
     `;
