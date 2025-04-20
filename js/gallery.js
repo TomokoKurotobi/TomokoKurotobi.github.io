@@ -166,13 +166,14 @@ const galleryItems = [
 
 function createGallery(attachTo) {
   const gallery = document.getElementById(attachTo);
-  gallery.className = 'd-flex flex-wrap justify-content-center gap-3';
+  gallery.className = 'd-flex flex-wrap justify-content-center gap-2';
 
   galleryItems.forEach(item => {
     const galleryItem = document.createElement('div');
-    galleryItem.className = 'card border-0 shadow-sm col-lg-1 col-md-2 col-sm-3 d-flex flex-column justify-content-center align-items-center';
+    galleryItem.className = 'card border-0 shadow-sm';
+    galleryItem.style.width = '6rem';
     galleryItem.innerHTML = `
-      <div role="button" class="card-body d-flex flex-column justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#${item.id}-popup">
+      <div role="button" class="card-body" data-bs-toggle="modal" data-bs-target="#${item.id}-popup">
         <img src="${item.src}" class="card-img-top p-2" alt="${item.alt}">
       </div>
     `;

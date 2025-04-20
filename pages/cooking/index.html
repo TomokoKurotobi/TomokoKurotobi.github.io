@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
-<!--[if !IE]><!-->
 <html lang="en">
-<!--<![endif]-->
 
 <head>
     <meta charset="UTF-8">
@@ -12,76 +9,65 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Charm:wght@400;700&display=swap"
-        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/pages/cooking/css/style.css">
-    <link rel="stylesheet" href="/pages/cooking/css/gallery.css">
 </head>
 
 <body class="body-hobby">
     <!-- HEADER -->
-    <section id="header" class="header">
+    <header class="header bg-orange fixed-top" id="header">
         <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container-fluid">
-                    <h1><a class="navbar-brand" href="/"><i class='fa fa-home'></i></a></h1>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <i class="fa-solid fa-bars"></i>
-                        <i class="fa-solid fa-times"></i>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div class="navbar-nav pull-right">
-                            <a class="nav-link" href="index.html#about">Jurney</a>
-                            <a class="nav-link" href="index.html#dishes">Dishes</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
+        <nav class="navbar navbar-expand-lg navbar-dark" role="navigation">
+            <a href="/"><i class='fa fa-home'></i></a>
+            <button class="navbar-toggler" id="menu-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                </span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="main-nav">
+            <ul class="navbar-nav ms-auto text-end">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#dishes">Dishes</a>
+                </li>
+            </ul>
+            </div>
+        </nav>
         </div>
-    </section>
+    </header>
 
     <!-- HOME -->
-    <section id="home" class="top-cover">
-        <div class="description">
+    <section id="home" class="vh-100 w-100">
+        <div >
             <h1>Welcome to Tomoko's cooking page</h1>
         </div>
     </section>
 
     <section id="about" class="page-section">
         <div class="container">
-            <div class="heading">
-                <h1>Discover My Culinary Journey</h1>
-            </div>
-            <div>
-                <p>
-                    Cooking is more than just a hobby for me—it's a passion that I've cultivated over the years. My
-                    culinary adventure began when I enrolled in a culinary art school for six months,
-                    immersing myself in the art of cooking. During my time there, I delved into the intricacies of
-                    various cuisines, from the refined flavors of French cuisine to the bold spices of Indian dishes.
-                </p>
-                <p>
-                    One aspect of cooking that truly captivated me was sharpening my knife skills to perfection. I found
-                    joy in meticulously cutting ingredients to ensure uniformity and enhance the overall quality of my
-                    creations. Moreover, I developed a keen eye for presentation, reveling in the opportunity to
-                    artfully arrange dishes that not only delighted the palate but also pleased the eye. </p>
-            </div>
+            <h1>Discover My Culinary Journey</h1>
+            <p>
+                Cooking is more than just a hobby for me—it's a passion that I've cultivated over the years. My
+                culinary adventure began when I enrolled in a culinary art school for six months,
+                immersing myself in the art of cooking. During my time there, I delved into the intricacies of
+                various cuisines, from the refined flavors of French cuisine to the bold spices of Indian dishes.
+            </p>
+            <p>
+                One aspect of cooking that truly captivated me was sharpening my knife skills to perfection. I found
+                joy in meticulously cutting ingredients to ensure uniformity and enhance the overall quality of my
+                creations. Moreover, I developed a keen eye for presentation, reveling in the opportunity to
+                artfully arrange dishes that not only delighted the palate but also pleased the eye. 
+            </p>
     </section>
 
-    <section id="dishes" class="page-section">
+    <section id="dishes">
         <div class="container">
-            <div class="heading">
-                <h1>My Dishes</h1>
-            </div>
-            <div class="gallery">
-                <ul class="gallery-grid" id="gallery-grid"></ul>
-                <div id="gallery-popups"></div>
-            </div>
+            <h1>My Dishes</h1>
+            <div id="gallery-grid"></div>
+            <div id="gallery-popups"></div>
         </div>
     </section>
 
@@ -97,11 +83,15 @@
     <script>
         new WOW().init();
         $(document).ready(function () {
-            $('.navbar-toggler').click(function () {
-                $(this).find('.fa-bars, .fa-times').toggle();
+            $('.navbar-collapse .nav-link').on('click', function(){
+                $('.navbar-collapse').collapse('hide');
+                $('#menu-toggle').removeClass('open');
+            });
+            $('#menu-toggle').on('click', function(){
+                $(this).toggleClass('open');
             });
 
-            var animation = bodymovin.loadAnimation({
+            const animation = bodymovin.loadAnimation({
                 container: document.getElementById('home'),
                 path: 'figures/Animation - 1714490458523.json',
                 renderer: 'svg',

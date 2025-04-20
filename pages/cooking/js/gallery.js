@@ -1,5 +1,5 @@
 
-var fileBaseNames = [
+const fileBaseNames = [
   'IMG_20200109_123759.jpg', 'IMG_20200109_131729.jpg',
   'IMG_20200110_130236.jpg', 'IMG_20200114_125757.jpg',
   'IMG_20200114_135029.jpg', 'IMG_20200115_123509.jpg',
@@ -61,7 +61,7 @@ const baseURL =
 
 function fillArray(fileNames) {
   fileNames.forEach((fileName, index) => {
-    let item = {
+    const item = {
       id: 'gallery-item-' + (index + 1).toString(),
       src: fileName,
       alt: '',
@@ -76,7 +76,7 @@ function fillArray(fileNames) {
 // Function to fetch a single file
 function fetchFile(baseName) {
   return new Promise(function(resolve, reject) {
-    var url = baseURL + baseName;
+    const url = baseURL + baseName;
     $.ajax({
       url: url,
       success: function(data) {
@@ -94,30 +94,25 @@ function fetchFile(baseName) {
 // Define gallery grid items
 
 function createGalleryItem(id, src, alt, caption) {
-  let galleryItem = document.createElement('li');
-  galleryItem.className = 'gallery-item wow fadeInUp';
+  const galleryItem = document.createElement('div');
+  galleryItem.setAttribute('role', 'button');
+  galleryItem.className = 'card border-0 shadow-sm';
+  galleryItem.style.width = '8rem';
+  galleryItem.style.height = '8rem';
   galleryItem.id = id;
-
-  let image = document.createElement('img');
-  image.src = src;
-  image.alt = alt;
-
-  let colorOverlay = document.createElement('div');
-  colorOverlay.className = 'color-overlay';
-
-  galleryItem.appendChild(image);
-  galleryItem.appendChild(colorOverlay);
+  galleryItem.innerHTML = `
+      <img src="${src}" class="card-img-top h-100 w-100 object-fit-cover rounded" alt="${alt}" >
+  `;
 
   return galleryItem;
 }
 
 function createGallery(attachTo) {
-  let gallery = document.getElementById(attachTo);
+  const gallery = document.getElementById(attachTo);
+  gallery.className = 'd-flex flex-wrap justify-content-center gap-2';
   for (let i = 0; i < galleryItems.length; i++) {
-    let item = galleryItems[i];
-    let galleryItem =
-        createGalleryItem(item.id, item.src, item.alt, item.caption);
-    gallery.appendChild(galleryItem);
+    const item = galleryItems[i];
+    gallery.appendChild(createGalleryItem(item.id, item.src, item.alt, item.caption));
   }
 }
 
@@ -125,22 +120,22 @@ function createGallery(attachTo) {
 
 function createGalleryPopups(attachTo) {
   // Gallery popups (display control)
-  let popups = document.getElementById(attachTo);
+  const popups = document.getElementById(attachTo);
   popups.className = 'gallery-popups';
 
   // Carousel
-  let carousel = document.createElement('div');
+  const carousel = document.createElement('div');
   carousel.className = 'carousel slide cover-all';
   carousel.id = 'gallery-carousel';
   carousel.setAttribute('data-bs-interval', 'false');
   carousel.setAttribute('data-ride', 'carousel');
 
   // Carousel inner to hold items
-  let carouselInner = document.createElement('div');
+  const carouselInner = document.createElement('div');
   carouselInner.className = 'carousel-inner cover-all';
   for (let i = 0; i < galleryItems.length; i++) {
-    let item = galleryItems[i];
-    let carouselItem = document.createElement('div');
+    const item = galleryItems[i];
+    const carouselItem = document.createElement('div');
     carouselItem.className = 'carousel-item cover-all';
     if (i == 0) {
       carouselItem.className += ' active';  // Set first item as active
@@ -153,7 +148,7 @@ function createGalleryPopups(attachTo) {
   carousel.appendChild(carouselInner);
 
   // Carousel controls
-  let prev = document.createElement('button');
+  const prev = document.createElement('button');
   prev.className = 'carousel-control-prev';
   prev.type = 'button';
   prev.id = 'carousel-control-prev'
@@ -162,7 +157,7 @@ function createGalleryPopups(attachTo) {
   prev.innerHTML =
       '<span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span>';
 
-  let next = document.createElement('button');
+  const next = document.createElement('button');
   next.className = 'carousel-control-next';
   next.id = 'carousel-control-next'
   next.type = 'button';
@@ -177,7 +172,7 @@ function createGalleryPopups(attachTo) {
   popups.appendChild(carousel);
 }
 
-var popups = document.getElementById('gallery-popups');
+const popups = document.getElementById('gallery-popups');
 
 function closePopup() {
   popups.style.display = 'none';
@@ -216,7 +211,7 @@ $(document).ready(function() {
 
 
         galleryItems.forEach(function(item) {
-          var popup = $('#' + item.id + '-popup');
+          const popup = $('#' + item.id + '-popup');
           $('#' + item.id).click(function(e) {
             e.stopPropagation();  // Stop event bubbling
             var activePopup = $('.carousel-item.active');
