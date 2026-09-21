@@ -5,6 +5,7 @@ const empty = document.querySelector('[data-empty]');
 const error = document.querySelector('[data-error]');
 const dialog = document.querySelector('[data-dialog]');
 const storageKey = 'tomoko-playground:favorites:v1';
+const siteUrl = relativePath => new URL(relativePath, document.baseURI).href;
 let dishes = [];
 let activeDish = null;
 let lastTrigger = null;
@@ -38,7 +39,7 @@ const dishCard = dish => {
   article.dataset.id = dish.id;
   article.innerHTML = `
     <button class="dish-card__open" type="button" aria-label="View ${dish.name}">
-      <img src="/pages/cooking/figures/thumbs/${dish.image}" alt="${dish.alt}" loading="lazy" width="900" height="700">
+      <img src="${siteUrl(`pages/cooking/figures/thumbs/${dish.image}`)}" alt="${dish.alt}" loading="lazy" width="900" height="700">
       <span class="dish-card__copy"><span class="eyebrow">${dish.category}</span><strong>${dish.name}</strong></span>
     </button>
     <button class="favorite-button favorite-button--card" type="button" aria-label="${favoriteLabel(dish)}" aria-pressed="${favorites.has(dish.id)}"><span aria-hidden="true">${favorites.has(dish.id) ? '♥' : '♡'}</span></button>`;
@@ -77,7 +78,7 @@ function openDialog(dish, trigger) {
   activeDish = dish;
   lastTrigger = trigger;
   const image = dialog.querySelector('[data-dialog-image]');
-  image.src = `/pages/cooking/figures/gallery/${dish.image}`;
+  image.src = siteUrl(`pages/cooking/figures/gallery/${dish.image}`);
   image.alt = dish.alt;
   dialog.querySelector('[data-dialog-category]').textContent = dish.category;
   dialog.querySelector('[data-dialog-title]').textContent = dish.name;
@@ -101,7 +102,7 @@ document.querySelector('[data-random]').addEventListener('click', event => {
 });
 
 try {
-  const response = await fetch('/data/dishes.json');
+  const response = await fetch(siteUrl('data/dishes.json'));
   if (!response.ok) throw new Error('Dish data request failed');
   const records = await response.json();
   dishes = records.filter(dish => dish.id && dish.name && dish.image && dish.alt && dish.category);

@@ -13,6 +13,7 @@ const bestNode = document.querySelector('[data-best]');
 const announcer = document.querySelector('[data-announcer]');
 const result = document.querySelector('[data-result]');
 const storageKey = 'tomoko-playground:kitchen-pairs-best:v1';
+const siteUrl = relativePath => new URL(relativePath, document.baseURI).href;
 let firstCard = null;
 let secondCard = null;
 let locked = false;
@@ -112,7 +113,7 @@ const newGame = () => {
     button.dataset.dish = dish.id;
     button.dataset.name = dish.name;
     button.setAttribute('aria-label', 'Hidden dish card');
-    button.innerHTML = `<span class="memory-card__back" aria-hidden="true">?</span><span class="memory-card__face" aria-hidden="true"><img src="/pages/cooking/figures/thumbs/${dish.image}" alt=""><span>${dish.name}</span></span>`;
+    button.innerHTML = `<span class="memory-card__back" aria-hidden="true">?</span><span class="memory-card__face" aria-hidden="true"><img src="${siteUrl(`pages/cooking/figures/thumbs/${dish.image}`)}" alt=""><span>${dish.name}</span></span>`;
     button.addEventListener('click', () => selectCard(button));
     button.style.setProperty('--delay', `${index * 25}ms`);
     return button;

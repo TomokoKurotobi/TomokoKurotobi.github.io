@@ -11,15 +11,16 @@
   <meta property="og:image" content="https://tomokokurotobi.github.io/figures/cover.png">
   <meta property="og:url" content="https://tomokokurotobi.github.io/">
   <link rel="canonical" href="https://tomokokurotobi.github.io/">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/css/style.css">
+  <base href="./">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
   <title>Tomoko's Playground</title>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header" data-header>
     <div class="site-header__inner">
-      <a class="brand" href="/" aria-label="Tomoko's Playground, home">
+      <a class="brand" href="./" aria-label="Tomoko's Playground, home">
         <span class="brand__mark" aria-hidden="true">TK</span>
         <span>Tomoko's Playground</span>
       </a>
@@ -28,10 +29,10 @@
         <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
       </button>
       <nav class="site-nav" id="site-nav" aria-label="Primary" data-nav>
-        <a href="/" aria-current="page">Home</a>
-        <a href="/pages/games/">Games</a>
-        <a href="/pages/cooking/">Cooking</a>
-        <a href="/pages/about/">About</a>
+        <a href="./" aria-current="page">Home</a>
+        <a href="pages/games/">Games</a>
+        <a href="pages/cooking/">Cooking</a>
+        <a href="pages/about/">About</a>
       </nav>
     </div>
   </header>
@@ -57,7 +58,7 @@
         </div>
 
         <div class="portal-grid">
-          <a class="portal-card portal-card--games" href="/pages/games/">
+          <a class="portal-card portal-card--games" href="pages/games/">
             <span class="portal-card__number">01</span>
             <span class="portal-card__art" aria-hidden="true">✦ ◌ ✦</span>
             <span class="portal-card__content">
@@ -68,7 +69,7 @@
             </span>
           </a>
 
-          <a class="portal-card portal-card--cooking" href="/pages/cooking/">
+          <a class="portal-card portal-card--cooking" href="pages/cooking/">
             <span class="portal-card__number">02</span>
             <span class="portal-card__art portal-card__art--large" aria-hidden="true">🍳</span>
             <span class="portal-card__content">
@@ -79,7 +80,7 @@
             </span>
           </a>
 
-          <a class="portal-card portal-card--about" href="/pages/about/">
+          <a class="portal-card portal-card--about" href="pages/about/">
             <span class="portal-card__number">03</span>
             <span class="portal-card__art portal-card__art--large" aria-hidden="true">☕</span>
             <span class="portal-card__content">
@@ -114,6 +115,6 @@
       <p>© <span data-year></span> Tomoko Kurotobi</p>
     </div>
   </footer>
-  <script src="/js/site.js" defer></script>
+  <script src="js/site.js" defer></script>
 </body>
 </html>

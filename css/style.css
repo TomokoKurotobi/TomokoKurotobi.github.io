@@ -35,7 +35,7 @@ button, input, select { font: inherit; }
 .nav-toggle > span:not(.sr-only) { display: block; height: 2px; margin: 4px 0; background: currentColor; }
 
 .hero { position: relative; min-height: 46rem; display: grid; align-items: end; overflow: hidden; background: var(--ink); color: white; }
-.hero__image { position: absolute; inset: 0; background: url('/figures/cover.png') 63% center / cover no-repeat; transform: scale(1.01); }
+.hero__image { position: absolute; inset: 0; background: url('../figures/cover.png') 63% center / cover no-repeat; transform: scale(1.01); }
 .hero__overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgb(17 29 49 / 94%) 0%, rgb(17 29 49 / 72%) 39%, rgb(17 29 49 / 12%) 76%), linear-gradient(0deg, rgb(17 29 49 / 70%), transparent 48%); }
 .hero__content { position: relative; padding-block: 10rem 6rem; }
 .hero h1 { max-width: 720px; margin: .6rem 0 1.4rem; font: 700 clamp(2.8rem, 7vw, 5.8rem)/.98 var(--font-display); letter-spacing: -.04em; }

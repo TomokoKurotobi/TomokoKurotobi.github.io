@@ -5,10 +5,10 @@ const root = resolve(import.meta.dirname, '..');
 const htmlFiles = ['index.html', 'pages/about/index.html', 'pages/cooking/index.html', 'pages/games/index.html', 'pages/games/memory/index.html'];
 const errors = [];
 
-const localTarget = (reference, source) => {
+const localTarget = (reference, baseDirectory) => {
   const clean = reference.split('#')[0].split('?')[0];
   if (!clean || /^(https?:|mailto:|tel:|data:)/.test(clean)) return null;
-  let target = clean.startsWith('/') ? join(root, clean) : resolve(dirname(join(root, source)), clean);
+  let target = clean.startsWith('/') ? join(root, clean) : resolve(baseDirectory, clean);
   if (clean.endsWith('/')) target = join(target, 'index.html');
   return target;
 };
@@ -17,11 +17,14 @@ for (const file of htmlFiles) {
   const fullPath = join(root, file);
   if (!existsSync(fullPath)) { errors.push(`${file}: page is missing`); continue; }
   const html = readFileSync(fullPath, 'utf8');
+  const baseHref = html.match(/<base href="([^"]+)">/)?.[1];
+  const baseDirectory = baseHref ? resolve(dirname(fullPath), baseHref) : dirname(fullPath);
   if (!/<title>[^<]+<\/title>/.test(html)) errors.push(`${file}: missing title`);
   if (!/<meta name="description" content="[^"]+">/.test(html)) errors.push(`${file}: missing meta description`);
   if (!/<link rel="canonical" href="[^"]+">/.test(html)) errors.push(`${file}: missing canonical URL`);
-  for (const match of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
-    const target = localTarget(match[1], file);
+  const htmlWithoutBase = html.replace(/<base\s+href="[^"]+">/, '');
+  for (const match of htmlWithoutBase.matchAll(/(?:href|src)="([^"]+)"/g)) {
+    const target = localTarget(match[1], baseDirectory);
     if (target && !existsSync(target)) errors.push(`${file}: missing local reference ${match[1]}`);
   }
 }
