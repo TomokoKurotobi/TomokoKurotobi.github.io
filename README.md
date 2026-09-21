@@ -22,13 +22,19 @@ Then open `http://localhost:8000/`. A server is required because the cooking pag
 
 ## Edit cooking ideas
 
-Published dishes live in `data/dishes.json`. Each record requires:
+Add or correct dish names in `dish_map.txt`, after the matching JPG filename. Leave the name blank to exclude a photograph from the site. Then rebuild the published data:
+
+```sh
+node scripts/build-dishes.mjs
+```
+
+The generated records live in `data/dishes.json`. Each record contains:
 
 - a unique `id`
 - `name`, `alt`, `category`, and `description` text
 - an `image` filename present in both `pages/cooking/figures/gallery/` and `pages/cooking/figures/thumbs/`
 
-The large gallery image is used only in the detail dialog. The smaller thumbnail is used in the browsing grid and memory game.
+The large gallery image is used only in the detail dialog. A corresponding file in `pages/cooking/figures/thumbs/` is used in the browsing grid and memory game.
 
 ## Validate
 

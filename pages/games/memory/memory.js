@@ -1,10 +1,10 @@
 const dishes = [
-  { id: 'tasting', name: 'Seafood tasting plate', image: 'IMG_20200109_123759.jpg' },
-  { id: 'soup', name: 'Garden vegetable broth', image: 'IMG_20200109_131729.jpg' },
-  { id: 'fish', name: 'Citrus baked fish', image: 'IMG_20200114_135029.jpg' },
-  { id: 'pasta', name: 'Creamy pasta nest', image: 'IMG_20200115_123509.jpg' },
-  { id: 'tart', name: 'Caramel fruit tart', image: 'IMG_20200120_141742.jpg' },
-  { id: 'chicken', name: 'Herb-stuffed chicken', image: 'IMG_20200121_133345.jpg' }
+  { id: 'cream-soup', name: 'Cream soup', image: 'IMG_20200109_131729.jpg' },
+  { id: 'onion-soup', name: 'Onion soup', image: 'IMG_20200110_130236.jpg' },
+  { id: 'steak', name: 'Steak with chimichurri sauce', image: 'IMG_20200114_135029.jpg' },
+  { id: 'quiche', name: 'Seafood quiche', image: 'IMG_20200115_123509.jpg' },
+  { id: 'consomme', name: 'Consommé soup', image: 'IMG_20200115_123821.jpg' },
+  { id: 'lamb', name: 'Grilled lamb chop', image: 'IMG_20200117_133458.jpg' }
 ];
 const board = document.querySelector('[data-memory-grid]');
 const movesNode = document.querySelector('[data-moves]');
