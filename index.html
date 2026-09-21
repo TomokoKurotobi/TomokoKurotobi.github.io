@@ -1,179 +1,118 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>TomokoKurotobi</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tomoko's playful corner of the web: small games, cooking inspiration, and stories about making things.">
+  <meta name="theme-color" content="#17263f">
+  <meta property="og:title" content="Tomoko's Playground">
+  <meta property="og:description" content="Small games, cooking inspiration, and stories from Tomoko's creative workshop.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://tomokokurotobi.github.io/figures/cover.png">
+  <meta property="og:url" content="https://tomokokurotobi.github.io/">
+  <link rel="canonical" href="https://tomokokurotobi.github.io/">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Tomoko's Playground</title>
 </head>
-
 <body>
-    <!-- HEADER -->
-    <header class="header bg-dark fixed-top" id="header">
-        <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-dark" role="navigation">
-            <a href="#"><i class='fa fa-home'></i></a>
-            <button class="navbar-toggler" id="menu-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon">
-                </span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="main-nav">
-            <ul class="navbar-nav ms-auto text-end">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html#about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#skills">Skill</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#contact">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/pages/cooking/">Hobby</a>
-                </li>
-            </ul>
-            </div>
-        </nav>
-        </div>
-    </header>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" data-header>
+    <div class="site-header__inner">
+      <a class="brand" href="/" aria-label="Tomoko's Playground, home">
+        <span class="brand__mark" aria-hidden="true">TK</span>
+        <span>Tomoko's Playground</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <span class="sr-only">Open navigation</span>
+        <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary" data-nav>
+        <a href="/" aria-current="page">Home</a>
+        <a href="/pages/games/">Games</a>
+        <a href="/pages/cooking/">Cooking</a>
+        <a href="/pages/about/">About</a>
+      </nav>
+    </div>
+  </header>
 
-    <!-- HOME -->
-    <section id="home" class="p-0">
-        <div class="carousel-inner vh-100 w-100" style="position: relative;">
-            <div class="carousel-item active h-100">
-                <img src="figures/cover.png" alt="cover" class="d-block w-100 h-100" style="object-fit: cover;">
-                <div class="carousel-caption d-flex justify-content-center align-items-center flex-column">
-                    <h1>Tomoko Kurotobi</h1>
-                    <h4>Software Developer</h4>
-                </div>
-            </div>
-        </div>
+  <main id="main">
+    <section class="hero">
+      <div class="hero__image" role="img" aria-label="An illustrated Tomoko programming at a desk"></div>
+      <div class="hero__overlay"></div>
+      <div class="hero__content page-shell">
+        <p class="eyebrow">Welcome to my little corner of the web</p>
+        <h1>I make things for work.<br><em>Here, I make things for fun.</em></h1>
+        <p class="hero__lede">Play a tiny game, find something delicious to cook, or wander through the stories behind this playground.</p>
+        <a class="button button--sunny" href="#explore">Come inside <span aria-hidden="true">↓</span></a>
+      </div>
     </section>
 
-    <section id="about" class="bg-light">
-        <div class="container">
-            <div class="heading text-center">
-                <h1><i class="fa-solid fa-user m-2"></i>About Me</h1>
-            </div>
-            <div class="about-me wow fadeInUp text-justify">
-                <p>
-                    Welcome to my website! With over 10 years of industry experience, I've dived deeply into the
-                    world of software development, mastering a series of computer languages
-                    and frameworks along the way. From crafting efficient algorithms in C++ to building dynamic web
-                    applications with React.js and Electron, I've explored the full spectrum of programming
-                    possibilities.
-                    <br><br>
-
-                    My expertise extends beyond mere coding - I bring knowledge in robotics, automation systems, image
-                    processing, and mathematical algorithms to the table. Whether it's optimizing performance with CUDA
-                    and OpenCV or architecting scalable solutions with Qt and gRPC, I thrive on tackling complex
-                    challenges head-on.
-                    <br><br>
-
-                    But what truly sets me apart is my commitment to problem-solving. Throughout my career, I've been
-                    the go-to troubleshooter, efficiently resolving issues ranging from compilation failures to resource
-                    allocation and software crashes. My keen eye for detail and patient approach have earned me a
-                    reputation as a reliable problem-solver among my peers.
-                    <br><br>
-
-                    Yet, beyond the code, I believe in the power of collaboration and support. I've always been ready to
-                    lend a helping hand to my colleagues, fostering a culture of teamwork wherever I go.
-                    <br><br>
-
-                    Thank you for reading my story. I created this website to showcase my work and connect with
-                    like-minded individuals. Since I am new to web development, I would greatly appreciate any advice
-                    for further improvement!
-                </p>
-                <h3 class="text-end">
-                    <a href="https://www.linkedin.com/in/tomoko-kurotobi-a6b15b1b8/" class="social-link">
-                        <i class="fa-brands fa-linkedin text-blue"></i>
-                    </a>
-                    <a href="https://github.com/TomokoKurotobi" class="social-link">
-                        <i class="fa-brands fa-github text-blue"></i>
-                    </a>
-                </h3>
-            </div>
+    <section class="section section--cream" id="explore" aria-labelledby="explore-title">
+      <div class="page-shell">
+        <div class="section-heading">
+          <p class="eyebrow">Choose a room</p>
+          <h2 id="explore-title">What sounds fun today?</h2>
+          <p>No sign-up, no serious agenda. Pick a door and have a look around.</p>
         </div>
+
+        <div class="portal-grid">
+          <a class="portal-card portal-card--games" href="/pages/games/">
+            <span class="portal-card__number">01</span>
+            <span class="portal-card__art" aria-hidden="true">✦ ◌ ✦</span>
+            <span class="portal-card__content">
+              <span class="eyebrow">The arcade</span>
+              <strong>Games</strong>
+              <span>Small puzzles and playful experiments made for a quick break.</span>
+              <span class="text-link">Start playing <span aria-hidden="true">→</span></span>
+            </span>
+          </a>
+
+          <a class="portal-card portal-card--cooking" href="/pages/cooking/">
+            <span class="portal-card__number">02</span>
+            <span class="portal-card__art portal-card__art--large" aria-hidden="true">♨</span>
+            <span class="portal-card__content">
+              <span class="eyebrow">The kitchen</span>
+              <strong>Cooking ideas</strong>
+              <span>Browse dishes I have made or let the kitchen choose one for you.</span>
+              <span class="text-link">Find a dish <span aria-hidden="true">→</span></span>
+            </span>
+          </a>
+
+          <a class="portal-card portal-card--about" href="/pages/about/">
+            <span class="portal-card__number">03</span>
+            <span class="portal-card__art portal-card__art--large" aria-hidden="true">☕</span>
+            <span class="portal-card__content">
+              <span class="eyebrow">The studio</span>
+              <strong>About Tomoko</strong>
+              <span>A little about the person who cooks, codes, and keeps making things.</span>
+              <span class="text-link">Meet me <span aria-hidden="true">→</span></span>
+            </span>
+          </a>
+        </div>
+      </div>
     </section>
 
-    <section id="skills">
-        <div class="container">
-            <div class="heading text-center">
-                <h1><i class="fa-solid fa-code m-2"></i>Skills</h1>
-                <h3>Please click the skill to see the details</h3>
-            </div>
-            <div id="gallery-cards"></div>
-            <div id="gallery-popups"></div>
-        </div>
+    <section class="section note-section" aria-labelledby="currently-title">
+      <div class="page-shell note-card">
+        <div class="note-card__pin" aria-hidden="true"></div>
+        <p class="eyebrow">A note from the desk</p>
+        <h2 id="currently-title">Currently making this place feel like home.</h2>
+        <p>This playground will keep changing as I add new recipes, games, and small curiosities. There will probably be a few delightful rough edges along the way.</p>
+        <span class="note-card__signoff">— Tomoko</span>
+      </div>
     </section>
+  </main>
 
-    <section id="contact" class="bg-light">
-        <div class="container">
-            <div class="heading text-center">
-                <h1><i class="fa-solid fa-envelope m-2"></i>Contact</h1>
-            </div>
-            <div class="col-lg-8 col-md-10 col-sm-12 col-xs-12 mx-auto">
-                <form method="post" action="https://formspree.io/f/xgegnnwo" id="contactfrm" role="form">
-                    <div class="p-1">
-                        <label for="message-name">Name *</label>
-                        <input type="text" class="form-control" name="name" id="message-name"
-                            placeholder="Please enter your name" title="Enter your name" required>
-                    </div>
-                    <div class="p-1">
-                        <label for="message-email">Email *</label>
-                        <input type="email" class="form-control" name="email" id="message-email"
-                            placeholder="Please enter email" title="Enter a valid email address">
-                    </div>
-                    <div class="p-1">
-                        <label for="message-subject">Subject *</label>
-                        <textarea name="comment" class="form-control" id="message" style="height: 200px;"
-                            placeholder="Please enter your message…" title="Enter your message" required></textarea>
-                    </div>
-                    <div class="d-flex justify-content-end p-1">
-                        <button name="submit" type="submit" class="btn btn-primary" id="submit">Submit</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <footer id="animation-container" class="bg-light"></footer>
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"
-        integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="js/typing-effect.js"></script>
-    <script src="js/gallery.js"></script>
-    <script>
-        $(document).ready(function () {
-            const animation = bodymovin.loadAnimation({
-                container: document.getElementById('animation-container'),
-                path: 'figures/Animation - 1714436099627.json',
-                renderer: 'svg',
-                loop: true,
-                autoplay: true,
-                name: "Demo Animation",
-            });
-            $('.navbar-collapse .nav-link').on('click', function(){
-                $('.navbar-collapse').collapse('hide');
-                $('#menu-toggle').removeClass('open');
-            });
-            $('#menu-toggle').on('click', function(){
-                $(this).toggleClass('open');
-            });
-        });
-    </script>
-    </script>
-    </script>
+  <footer class="site-footer">
+    <div class="page-shell site-footer__inner">
+      <p>Made with curiosity and probably too much tea.</p>
+      <div class="footer-links">
+        <a href="https://github.com/TomokoKurotobi">GitHub<span class="sr-only"> (opens external site)</span></a>
+        <a href="https://www.linkedin.com/in/tomoko-kurotobi-a6b15b1b8/">LinkedIn<span class="sr-only"> (opens external site)</span></a>
+      </div>
+      <p>© <span data-year></span> Tomoko Kurotobi</p>
+    </div>
+  </footer>
+  <script src="/js/site.js" defer></script>
 </body>
-
 </html>
