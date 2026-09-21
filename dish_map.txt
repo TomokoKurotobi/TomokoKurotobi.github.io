@@ -1,0 +1,86 @@
+-rw-r--r--   1 501  20   386525 May  1  2024 IMG_20200109_123759.jpg 
+-rw-r--r--   1 501  20   898750 May  1  2024 IMG_20200109_131729.jpg Cream soup
+-rw-r--r--   1 501  20   871057 May  1  2024 IMG_20200110_130236.jpg Onion soup
+-rw-r--r--   1 501  20  1032341 May  1  2024 IMG_20200114_125757.jpg
+-rw-r--r--   1 501  20   423499 May  1  2024 IMG_20200114_135029.jpg Steak with chimichurri sauce
+-rw-r--r--   1 501  20   535064 May  1  2024 IMG_20200115_123509.jpg Seafood quiche
+-rw-r--r--   1 501  20   325956 May  1  2024 IMG_20200115_123821.jpg Consome soup
+-rw-r--r--   1 501  20  1019428 May  1  2024 IMG_20200117_133458.jpg Grilled lamb chop
+-rw-r--r--   1 501  20  1213328 May  1  2024 IMG_20200120_141742.jpg Poached salmon with hollandais sauce
+-rw-r--r--   1 501  20   510630 May  1  2024 IMG_20200121_133342.jpg Seared tuna with wasabi mayo
+-rw-r--r--   1 501  20  1481118 May  1  2024 IMG_20200121_133345.jpg Goat cheese stuffed chicken
+-rw-r--r--   1 501  20  1402224 May  1  2024 IMG_20200122_131658.jpg
+-rw-r--r--   1 501  20   458029 May  1  2024 IMG_20200123_115149.jpg Colorful beets calpachio
+-rw-r--r--   1 501  20   431277 May  1  2024 IMG_20200123_124408.jpg Roast beef
+-rw-r--r--   1 501  20   866381 May  1  2024 IMG_20200124_132614.jpg Braised beef with turned carrots
+-rw-r--r--   1 501  20   828466 May  1  2024 IMG_20200127_121048.jpg
+-rw-r--r--   1 501  20   407299 May  1  2024 IMG_20200127_125016.jpg Scallop with angel hair potatoes
+-rw-r--r--   1 501  20   951191 May  1  2024 IMG_20200128_123514.jpg
+-rw-r--r--   1 501  20  1008024 May  1  2024 IMG_20200129_124523.jpg Roast duck
+-rw-r--r--   1 501  20   383557 May  1  2024 IMG_20200130_123911.jpg Onion pie
+-rw-r--r--   1 501  20   446031 May  1  2024 IMG_20200130_131714.jpg Braised lamb shank
+-rw-r--r--   1 501  20   467542 May  1  2024 IMG_20200131_130538.jpg
+-rw-r--r--   1 501  20   457787 May  1  2024 IMG_20200131_134503.jpg Grilled chicken leg
+-rw-r--r--   1 501  20  1229709 May  1  2024 IMG_20200203_123459.jpg 
+-rw-r--r--   1 501  20  1659630 May  1  2024 IMG_20200203_132512.jpg Roasted quail with angel hair potatoes
+-rw-r--r--   1 501  20  1211389 May  1  2024 IMG_20200207_115853.jpg Lobster bisque
+-rw-r--r--   1 501  20   372706 May  1  2024 IMG_20200207_123601.jpg Poached fish with root veggies
+-rw-r--r--   1 501  20   469363 May  1  2024 IMG_20200210_123154.jpg Oyster in shells
+-rw-r--r--   1 501  20   388136 May  1  2024 IMG_20200210_132047.jpg 
+-rw-r--r--   1 501  20   396109 May  1  2024 IMG_20200211_122430.jpg Salmon flake canappe
+-rw-r--r--   1 501  20   511741 May  1  2024 IMG_20200211_131637.jpg Potato scaled grilled salmon
+-rw-r--r--   1 501  20   485601 May  1  2024 IMG_20200212_123630.jpg Beef calpachio
+-rw-r--r--   1 501  20   418199 May  1  2024 IMG_20200218_115150.jpg Salad in crispy shell
+-rw-r--r--   1 501  20   428641 May  1  2024 IMG_20200218_122309.jpg
+-rw-r--r--   1 501  20   393103 May  1  2024 IMG_20200219_122008.jpg Mussels and clams in Thai flavored sauce
+-rw-r--r--   1 501  20  1243182 May  1  2024 IMG_20200219_132709.jpg Choux pastry
+-rw-r--r--   1 501  20   831138 May  1  2024 IMG_20200220_124740.jpg Pasta in gravy
+-rw-r--r--   1 501  20   644652 May  1  2024 IMG_20200224_114111.jpg Wedge salad
+-rw-r--r--   1 501  20   739051 May  1  2024 IMG_20200224_123338.jpg Steak
+-rw-r--r--   1 501  20   532009 May  1  2024 IMG_20200225_130100.jpg Smoked salmon canappe
+-rw-r--r--   1 501  20   491093 May  1  2024 IMG_20200225_134424.jpg Grilled lobster
+-rw-r--r--   1 501  20   582999 May  1  2024 IMG_20200226_120712.jpg Savory puff pastry
+-rw-r--r--   1 501  20   615608 May  1  2024 IMG_20200226_125009.jpg
+-rw-r--r--   1 501  20   395751 May  1  2024 IMG_20200227_124400.jpg Gaspacho & salad in tomato shell
+-rw-r--r--   1 501  20   515722 May  1  2024 IMG_20200228_121922.jpg
+-rw-r--r--   1 501  20   492442 May  1  2024 IMG_20200228_125526.jpg
+-rw-r--r--   1 501  20   425065 May  1  2024 IMG_20200302_121034.jpg Foigres in duck shaped puff pastry
+-rw-r--r--   1 501  20   490770 May  1  2024 IMG_20200302_124631.jpg
+-rw-r--r--   1 501  20   548167 May  1  2024 IMG_20200303_121849.jpg Scrambled egg 
+-rw-r--r--   1 501  20   918300 May  1  2024 IMG_20200303_130228.jpg Roasted duck breast
+-rw-r--r--   1 501  20  1007414 May  1  2024 IMG_20200706_112657.jpg
+-rw-r--r--   1 501  20   857074 May  1  2024 IMG_20200707_110929.jpg Tempei tacos and potato salad
+-rw-r--r--   1 501  20   499731 May  1  2024 IMG_20200709_120312.jpg Vegan pasta
+-rw-r--r--   1 501  20   432409 May  1  2024 IMG_20200713_103711.jpg Vegan cheese roll
+-rw-r--r--   1 501  20   444118 May  1  2024 IMG_20200714_114254.jpg Canappe
+-rw-r--r--   1 501  20   410162 May  1  2024 IMG_20200715_112737.jpg Vegan meat ball pasta
+-rw-r--r--   1 501  20   328117 May  1  2024 IMG_20200717_114853.jpg
+-rw-r--r--   1 501  20   299436 May  1  2024 IMG_20200721_113345.jpg
+-rw-r--r--   1 501  20   494518 May  1  2024 IMG_20200721_121848.jpg Thai yellow seafood curry
+-rw-r--r--   1 501  20   379219 May  1  2024 IMG_20200722_120252.jpg
+-rw-r--r--   1 501  20   473613 May  1  2024 IMG_20200804_112203.jpg Roasted quail with blueberry sauce with ratatouille
+-rw-r--r--   1 501  20   532662 May  1  2024 IMG_20200805_111039.jpg Steak on gravy with poached egg
+-rw-r--r--   1 501  20   428724 May  1  2024 IMG_20200806_120401.jpg
+-rw-r--r--   1 501  20  1704751 May  1  2024 IMG_20200807_170516.jpg Creamy corn soup sable top
+-rw-r--r--   1 501  20   368662 May  1  2024 IMG_20200810_105915.jpg Roast duck blueberry sauce
+-rw-r--r--   1 501  20  1057274 May  1  2024 IMG_20200811_112641.jpg Consome soup
+-rw-r--r--   1 501  20   425661 May  1  2024 IMG_20200811_151947.jpg Roast duck cherry sauce
+-rw-r--r--   1 501  20   407925 May  1  2024 IMG_20200812_111150.jpg Grilled cheese creamy soup side
+-rw-r--r--   1 501  20   243729 May  1  2024 IMG_20200812_155441.jpg Mussel rissoto
+-rw-r--r--   1 501  20   666077 May  1  2024 IMG_20200818_110416.jpg Indian curry
+-rw-r--r--   1 501  20  1081886 May  1  2024 IMG_20200819_111815.jpg
+-rw-r--r--   1 501  20   282883 May  1  2024 IMG_20200819_111858.jpg
+-rw-r--r--   1 501  20   328359 May  1  2024 IMG_20200819_160130.jpg Fried cheese croquette
+-rw-r--r--   1 501  20   215779 May  1  2024 IMG_20200819_161959.jpg
+-rw-r--r--   1 501  20   393767 May  1  2024 IMG_20200820_115608.jpg
+-rw-r--r--   1 501  20   679765 May  1  2024 IMG_20200820_152744.jpg
+-rw-r--r--   1 501  20   260547 May  1  2024 IMG_20200821_161134.jpg
+-rw-r--r--   1 501  20   435445 May  1  2024 IMG_20200824_104604.jpg
+-rw-r--r--   1 501  20   301759 May  1  2024 IMG_20200825_104611.jpg
+-rw-r--r--   1 501  20   399009 May  1  2024 IMG_20200825_104856.jpg Butter chicken
+-rw-r--r--   1 501  20  2041767 May  1  2024 IMG_20200827_111837.jpg
+-rw-r--r--   1 501  20   423786 May  1  2024 IMG_20200827_143104.jpg
+-rw-r--r--   1 501  20   427002 May  1  2024 IMG_20200922_114327.jpg Roast duck lace top
+-rw-r--r--   1 501  20   363958 May  1  2024 IMG_20200922_115430.jpg Seafood salad in ice shell
+-rw-r--r--   1 501  20   303554 May  1  2024 IMG_20200922_120547.jpg Foigres ball on sable
+-rw-r--r--   1 501  20   378839 May  1  2024 IMG_20200924_113511.jpg Foigres ball on puff pastry
