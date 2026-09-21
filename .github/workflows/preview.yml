@@ -1,16 +1,33 @@
 name: Post Branch Preview URL to PR Page
 
 on:
+  push:
+    branches: [main]
   pull_request:
-    types: [opened, reopened]
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
 
 jobs:
-  post_preview_url:
+  validate:
     runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Validate site content and links
+        run: node scripts/check-site.mjs
+
+  post_preview_url:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Get branch name
         id: branch_name
