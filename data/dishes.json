@@ -5,7 +5,7 @@
     "image": "IMG_20200109_131729.jpg",
     "alt": "A plated serving of Cream soup",
     "category": "soup",
-    "description": "Cream soup, made in Tomoko's kitchen."
+    "description": "A plated serving of Cream soup."
   },
   {
     "id": "onion-soup",
@@ -13,7 +13,7 @@
     "image": "IMG_20200110_130236.jpg",
     "alt": "A plated serving of Onion soup",
     "category": "soup",
-    "description": "Onion soup, made in Tomoko's kitchen."
+    "description": "A plated serving of Onion soup."
   },
   {
     "id": "steak-with-chimichurri-sauce",
@@ -21,7 +21,7 @@
     "image": "IMG_20200114_135029.jpg",
     "alt": "A plated serving of Steak with chimichurri sauce",
     "category": "main",
-    "description": "Steak with chimichurri sauce, made in Tomoko's kitchen."
+    "description": "A plated serving of Steak with chimichurri sauce."
   },
   {
     "id": "seafood-quiche",
@@ -29,7 +29,7 @@
     "image": "IMG_20200115_123509.jpg",
     "alt": "A plated serving of Seafood quiche",
     "category": "main",
-    "description": "Seafood quiche, made in Tomoko's kitchen."
+    "description": "A plated serving of Seafood quiche."
   },
   {
     "id": "consomme-soup",
@@ -37,7 +37,7 @@
     "image": "IMG_20200115_123821.jpg",
     "alt": "A plated serving of Consommé soup",
     "category": "soup",
-    "description": "Consommé soup, made in Tomoko's kitchen."
+    "description": "A plated serving of Consommé soup."
   },
   {
     "id": "grilled-lamb-chop",
@@ -45,7 +45,7 @@
     "image": "IMG_20200117_133458.jpg",
     "alt": "A plated serving of Grilled lamb chop",
     "category": "main",
-    "description": "Grilled lamb chop, made in Tomoko's kitchen."
+    "description": "A plated serving of Grilled lamb chop."
   },
   {
     "id": "poached-salmon-with-hollandaise-sauce",
@@ -53,7 +53,7 @@
     "image": "IMG_20200120_141742.jpg",
     "alt": "A plated serving of Poached salmon with hollandaise sauce",
     "category": "main",
-    "description": "Poached salmon with hollandaise sauce, made in Tomoko's kitchen."
+    "description": "A plated serving of Poached salmon with hollandaise sauce."
   },
   {
     "id": "seared-tuna-with-wasabi-mayo",
@@ -61,7 +61,7 @@
     "image": "IMG_20200121_133342.jpg",
     "alt": "A plated serving of Seared tuna with wasabi mayo",
     "category": "main",
-    "description": "Seared tuna with wasabi mayo, made in Tomoko's kitchen."
+    "description": "A plated serving of Seared tuna with wasabi mayo."
   },
   {
     "id": "goat-cheese-stuffed-chicken",
@@ -69,7 +69,7 @@
     "image": "IMG_20200121_133345.jpg",
     "alt": "A plated serving of Goat cheese stuffed chicken",
     "category": "main",
-    "description": "Goat cheese stuffed chicken, made in Tomoko's kitchen."
+    "description": "A plated serving of Goat cheese stuffed chicken."
   },
   {
     "id": "colorful-beets-carpaccio",
@@ -77,7 +77,7 @@
     "image": "IMG_20200123_115149.jpg",
     "alt": "A plated serving of Colorful beets carpaccio",
     "category": "starter",
-    "description": "Colorful beets carpaccio, made in Tomoko's kitchen."
+    "description": "A plated serving of Colorful beets carpaccio."
   },
   {
     "id": "roast-beef",
@@ -85,7 +85,7 @@
     "image": "IMG_20200123_124408.jpg",
     "alt": "A plated serving of Roast beef",
     "category": "main",
-    "description": "Roast beef, made in Tomoko's kitchen."
+    "description": "A plated serving of Roast beef."
   },
   {
     "id": "braised-beef-with-turned-carrots",
@@ -93,7 +93,7 @@
     "image": "IMG_20200124_132614.jpg",
     "alt": "A plated serving of Braised beef with turned carrots",
     "category": "main",
-    "description": "Braised beef with turned carrots, made in Tomoko's kitchen."
+    "description": "A plated serving of Braised beef with turned carrots."
   },
   {
     "id": "scallop-with-angel-hair-potatoes",
@@ -101,7 +101,7 @@
     "image": "IMG_20200127_125016.jpg",
     "alt": "A plated serving of Scallop with angel hair potatoes",
     "category": "starter",
-    "description": "Scallop with angel hair potatoes, made in Tomoko's kitchen."
+    "description": "A plated serving of Scallop with angel hair potatoes."
   },
   {
     "id": "roast-duck",
@@ -109,7 +109,7 @@
     "image": "IMG_20200129_124523.jpg",
     "alt": "A plated serving of Roast duck",
     "category": "main",
-    "description": "Roast duck, made in Tomoko's kitchen."
+    "description": "A plated serving of Roast duck."
   },
   {
     "id": "onion-pie",
@@ -117,7 +117,7 @@
     "image": "IMG_20200130_123911.jpg",
     "alt": "A plated serving of Onion pie",
     "category": "main",
-    "description": "Onion pie, made in Tomoko's kitchen."
+    "description": "A plated serving of Onion pie."
   },
   {
     "id": "braised-lamb-shank",
@@ -125,7 +125,7 @@
     "image": "IMG_20200130_131714.jpg",
     "alt": "A plated serving of Braised lamb shank",
     "category": "main",
-    "description": "Braised lamb shank, made in Tomoko's kitchen."
+    "description": "A plated serving of Braised lamb shank."
   },
   {
     "id": "grilled-chicken-leg",
@@ -133,7 +133,7 @@
     "image": "IMG_20200131_134503.jpg",
     "alt": "A plated serving of Grilled chicken leg",
     "category": "main",
-    "description": "Grilled chicken leg, made in Tomoko's kitchen."
+    "description": "A plated serving of Grilled chicken leg."
   },
   {
     "id": "roasted-quail-with-angel-hair-potatoes",
@@ -141,7 +141,7 @@
     "image": "IMG_20200203_132512.jpg",
     "alt": "A plated serving of Roasted quail with angel hair potatoes",
     "category": "main",
-    "description": "Roasted quail with angel hair potatoes, made in Tomoko's kitchen."
+    "description": "A plated serving of Roasted quail with angel hair potatoes."
   },
   {
     "id": "lobster-bisque",
@@ -149,7 +149,7 @@
     "image": "IMG_20200207_115853.jpg",
     "alt": "A plated serving of Lobster bisque",
     "category": "soup",
-    "description": "Lobster bisque, made in Tomoko's kitchen."
+    "description": "A plated serving of Lobster bisque."
   },
   {
     "id": "poached-fish-with-root-vegetables",
@@ -157,7 +157,7 @@
     "image": "IMG_20200207_123601.jpg",
     "alt": "A plated serving of Poached fish with root vegetables",
     "category": "main",
-    "description": "Poached fish with root vegetables, made in Tomoko's kitchen."
+    "description": "A plated serving of Poached fish with root vegetables."
   },
   {
     "id": "oyster-in-shells",
@@ -165,7 +165,7 @@
     "image": "IMG_20200210_123154.jpg",
     "alt": "A plated serving of Oyster in shells",
     "category": "starter",
-    "description": "Oyster in shells, made in Tomoko's kitchen."
+    "description": "A plated serving of Oyster in shells."
   },
   {
     "id": "salmon-flake-canape",
@@ -173,7 +173,7 @@
     "image": "IMG_20200211_122430.jpg",
     "alt": "A plated serving of Salmon flake canapé",
     "category": "starter",
-    "description": "Salmon flake canapé, made in Tomoko's kitchen."
+    "description": "A plated serving of Salmon flake canapé."
   },
   {
     "id": "potato-scaled-grilled-salmon",
@@ -181,7 +181,7 @@
     "image": "IMG_20200211_131637.jpg",
     "alt": "A plated serving of Potato scaled grilled salmon",
     "category": "main",
-    "description": "Potato scaled grilled salmon, made in Tomoko's kitchen."
+    "description": "A plated serving of Potato scaled grilled salmon."
   },
   {
     "id": "beef-carpaccio",
@@ -189,7 +189,7 @@
     "image": "IMG_20200212_123630.jpg",
     "alt": "A plated serving of Beef carpaccio",
     "category": "starter",
-    "description": "Beef carpaccio, made in Tomoko's kitchen."
+    "description": "A plated serving of Beef carpaccio."
   },
   {
     "id": "salad-in-crispy-shell",
@@ -197,7 +197,7 @@
     "image": "IMG_20200218_115150.jpg",
     "alt": "A plated serving of Salad in crispy shell",
     "category": "starter",
-    "description": "Salad in crispy shell, made in Tomoko's kitchen."
+    "description": "A plated serving of Salad in crispy shell."
   },
   {
     "id": "mussels-and-clams-in-thai-flavored-sauce",
@@ -205,7 +205,7 @@
     "image": "IMG_20200219_122008.jpg",
     "alt": "A plated serving of Mussels and clams in Thai flavored sauce",
     "category": "main",
-    "description": "Mussels and clams in Thai flavored sauce, made in Tomoko's kitchen."
+    "description": "A plated serving of Mussels and clams in Thai flavored sauce."
   },
   {
     "id": "choux-pastry",
@@ -213,7 +213,7 @@
     "image": "IMG_20200219_132709.jpg",
     "alt": "A plated serving of Choux pastry",
     "category": "dessert",
-    "description": "Choux pastry, made in Tomoko's kitchen."
+    "description": "A plated serving of Choux pastry."
   },
   {
     "id": "pasta-in-gravy",
@@ -221,7 +221,7 @@
     "image": "IMG_20200220_124740.jpg",
     "alt": "A plated serving of Pasta in gravy",
     "category": "main",
-    "description": "Pasta in gravy, made in Tomoko's kitchen."
+    "description": "A plated serving of Pasta in gravy."
   },
   {
     "id": "wedge-salad",
@@ -229,7 +229,7 @@
     "image": "IMG_20200224_114111.jpg",
     "alt": "A plated serving of Wedge salad",
     "category": "starter",
-    "description": "Wedge salad, made in Tomoko's kitchen."
+    "description": "A plated serving of Wedge salad."
   },
   {
     "id": "steak",
@@ -237,7 +237,7 @@
     "image": "IMG_20200224_123338.jpg",
     "alt": "A plated serving of Steak",
     "category": "main",
-    "description": "Steak, made in Tomoko's kitchen."
+    "description": "A plated serving of Steak."
   },
   {
     "id": "smoked-salmon-canape",
@@ -245,7 +245,7 @@
     "image": "IMG_20200225_130100.jpg",
     "alt": "A plated serving of Smoked salmon canapé",
     "category": "starter",
-    "description": "Smoked salmon canapé, made in Tomoko's kitchen."
+    "description": "A plated serving of Smoked salmon canapé."
   },
   {
     "id": "grilled-lobster",
@@ -253,7 +253,7 @@
     "image": "IMG_20200225_134424.jpg",
     "alt": "A plated serving of Grilled lobster",
     "category": "main",
-    "description": "Grilled lobster, made in Tomoko's kitchen."
+    "description": "A plated serving of Grilled lobster."
   },
   {
     "id": "savory-puff-pastry",
@@ -261,7 +261,7 @@
     "image": "IMG_20200226_120712.jpg",
     "alt": "A plated serving of Savory puff pastry",
     "category": "starter",
-    "description": "Savory puff pastry, made in Tomoko's kitchen."
+    "description": "A plated serving of Savory puff pastry."
   },
   {
     "id": "gazpacho-salad-in-tomato-shell",
@@ -269,7 +269,7 @@
     "image": "IMG_20200227_124400.jpg",
     "alt": "A plated serving of Gazpacho & salad in tomato shell",
     "category": "soup",
-    "description": "Gazpacho & salad in tomato shell, made in Tomoko's kitchen."
+    "description": "A plated serving of Gazpacho & salad in tomato shell."
   },
   {
     "id": "foie-gras-in-duck-shaped-puff-pastry",
@@ -277,7 +277,7 @@
     "image": "IMG_20200302_121034.jpg",
     "alt": "A plated serving of Foie gras in duck shaped puff pastry",
     "category": "starter",
-    "description": "Foie gras in duck shaped puff pastry, made in Tomoko's kitchen."
+    "description": "A plated serving of Foie gras in duck shaped puff pastry."
   },
   {
     "id": "scrambled-egg",
@@ -285,7 +285,7 @@
     "image": "IMG_20200303_121849.jpg",
     "alt": "A plated serving of Scrambled egg",
     "category": "main",
-    "description": "Scrambled egg, made in Tomoko's kitchen."
+    "description": "A plated serving of Scrambled egg."
   },
   {
     "id": "roasted-duck-breast",
@@ -293,7 +293,7 @@
     "image": "IMG_20200303_130228.jpg",
     "alt": "A plated serving of Roasted duck breast",
     "category": "main",
-    "description": "Roasted duck breast, made in Tomoko's kitchen."
+    "description": "A plated serving of Roasted duck breast."
   },
   {
     "id": "tempeh-tacos-and-potato-salad",
@@ -301,7 +301,7 @@
     "image": "IMG_20200707_110929.jpg",
     "alt": "A plated serving of Tempeh tacos and potato salad",
     "category": "starter",
-    "description": "Tempeh tacos and potato salad, made in Tomoko's kitchen."
+    "description": "A plated serving of Tempeh tacos and potato salad."
   },
   {
     "id": "vegan-pasta",
@@ -309,7 +309,7 @@
     "image": "IMG_20200709_120312.jpg",
     "alt": "A plated serving of Vegan pasta",
     "category": "main",
-    "description": "Vegan pasta, made in Tomoko's kitchen."
+    "description": "A plated serving of Vegan pasta."
   },
   {
     "id": "vegan-cheese-roll",
@@ -317,7 +317,7 @@
     "image": "IMG_20200713_103711.jpg",
     "alt": "A plated serving of Vegan cheese roll",
     "category": "main",
-    "description": "Vegan cheese roll, made in Tomoko's kitchen."
+    "description": "A plated serving of Vegan cheese roll."
   },
   {
     "id": "canape",
@@ -325,7 +325,7 @@
     "image": "IMG_20200714_114254.jpg",
     "alt": "A plated serving of canapé",
     "category": "starter",
-    "description": "canapé, made in Tomoko's kitchen."
+    "description": "A plated serving of canapé."
   },
   {
     "id": "vegan-meatball-pasta",
@@ -333,7 +333,7 @@
     "image": "IMG_20200715_112737.jpg",
     "alt": "A plated serving of Vegan meatball pasta",
     "category": "main",
-    "description": "Vegan meatball pasta, made in Tomoko's kitchen."
+    "description": "A plated serving of Vegan meatball pasta."
   },
   {
     "id": "thai-yellow-seafood-curry",
@@ -341,7 +341,7 @@
     "image": "IMG_20200721_121848.jpg",
     "alt": "A plated serving of Thai yellow seafood curry",
     "category": "main",
-    "description": "Thai yellow seafood curry, made in Tomoko's kitchen."
+    "description": "A plated serving of Thai yellow seafood curry."
   },
   {
     "id": "roasted-quail-with-blueberry-sauce-with-ratatouille",
@@ -349,7 +349,7 @@
     "image": "IMG_20200804_112203.jpg",
     "alt": "A plated serving of Roasted quail with blueberry sauce with ratatouille",
     "category": "main",
-    "description": "Roasted quail with blueberry sauce with ratatouille, made in Tomoko's kitchen."
+    "description": "A plated serving of Roasted quail with blueberry sauce with ratatouille."
   },
   {
     "id": "steak-on-gravy-with-poached-egg",
@@ -357,7 +357,7 @@
     "image": "IMG_20200805_111039.jpg",
     "alt": "A plated serving of Steak on gravy with poached egg",
     "category": "main",
-    "description": "Steak on gravy with poached egg, made in Tomoko's kitchen."
+    "description": "A plated serving of Steak on gravy with poached egg."
   },
   {
     "id": "creamy-corn-soup-sable-top",
@@ -365,7 +365,7 @@
     "image": "IMG_20200807_170516.jpg",
     "alt": "A plated serving of Creamy corn soup sable top",
     "category": "soup",
-    "description": "Creamy corn soup sable top, made in Tomoko's kitchen."
+    "description": "A plated serving of Creamy corn soup sable top."
   },
   {
     "id": "roast-duck-blueberry-sauce",
@@ -373,7 +373,7 @@
     "image": "IMG_20200810_105915.jpg",
     "alt": "A plated serving of Roast duck blueberry sauce",
     "category": "main",
-    "description": "Roast duck blueberry sauce, made in Tomoko's kitchen."
+    "description": "A plated serving of Roast duck blueberry sauce."
   },
   {
     "id": "consomme-soup-20200811",
@@ -381,7 +381,7 @@
     "image": "IMG_20200811_112641.jpg",
     "alt": "A plated serving of Consommé soup",
     "category": "soup",
-    "description": "Consommé soup, made in Tomoko's kitchen."
+    "description": "A plated serving of Consommé soup."
   },
   {
     "id": "roast-duck-cherry-sauce",
@@ -389,7 +389,7 @@
     "image": "IMG_20200811_151947.jpg",
     "alt": "A plated serving of Roast duck cherry sauce",
     "category": "main",
-    "description": "Roast duck cherry sauce, made in Tomoko's kitchen."
+    "description": "A plated serving of Roast duck cherry sauce."
   },
   {
     "id": "grilled-cheese-creamy-soup-side",
@@ -397,7 +397,7 @@
     "image": "IMG_20200812_111150.jpg",
     "alt": "A plated serving of Grilled cheese creamy soup side",
     "category": "soup",
-    "description": "Grilled cheese creamy soup side, made in Tomoko's kitchen."
+    "description": "A plated serving of Grilled cheese creamy soup side."
   },
   {
     "id": "mussel-risotto",
@@ -405,7 +405,7 @@
     "image": "IMG_20200812_155441.jpg",
     "alt": "A plated serving of Mussel risotto",
     "category": "main",
-    "description": "Mussel risotto, made in Tomoko's kitchen."
+    "description": "A plated serving of Mussel risotto."
   },
   {
     "id": "indian-curry",
@@ -413,7 +413,7 @@
     "image": "IMG_20200818_110416.jpg",
     "alt": "A plated serving of Indian curry",
     "category": "main",
-    "description": "Indian curry, made in Tomoko's kitchen."
+    "description": "A plated serving of Indian curry."
   },
   {
     "id": "fried-cheese-croquette",
@@ -421,7 +421,7 @@
     "image": "IMG_20200819_160130.jpg",
     "alt": "A plated serving of Fried cheese croquette",
     "category": "main",
-    "description": "Fried cheese croquette, made in Tomoko's kitchen."
+    "description": "A plated serving of Fried cheese croquette."
   },
   {
     "id": "butter-chicken",
@@ -429,7 +429,7 @@
     "image": "IMG_20200825_104856.jpg",
     "alt": "A plated serving of Butter chicken",
     "category": "main",
-    "description": "Butter chicken, made in Tomoko's kitchen."
+    "description": "A plated serving of Butter chicken."
   },
   {
     "id": "roast-duck-lace-top",
@@ -437,7 +437,7 @@
     "image": "IMG_20200922_114327.jpg",
     "alt": "A plated serving of Roast duck lace top",
     "category": "main",
-    "description": "Roast duck lace top, made in Tomoko's kitchen."
+    "description": "A plated serving of Roast duck lace top."
   },
   {
     "id": "seafood-salad-in-ice-shell",
@@ -445,7 +445,7 @@
     "image": "IMG_20200922_115430.jpg",
     "alt": "A plated serving of Seafood salad in ice shell",
     "category": "starter",
-    "description": "Seafood salad in ice shell, made in Tomoko's kitchen."
+    "description": "A plated serving of Seafood salad in ice shell."
   },
   {
     "id": "foie-gras-ball-on-sable",
@@ -453,7 +453,7 @@
     "image": "IMG_20200922_120547.jpg",
     "alt": "A plated serving of Foie gras ball on sable",
     "category": "starter",
-    "description": "Foie gras ball on sable, made in Tomoko's kitchen."
+    "description": "A plated serving of Foie gras ball on sable."
   },
   {
     "id": "foie-gras-ball-on-puff-pastry",
@@ -461,6 +461,6 @@
     "image": "IMG_20200924_113511.jpg",
     "alt": "A plated serving of Foie gras ball on puff pastry",
     "category": "starter",
-    "description": "Foie gras ball on puff pastry, made in Tomoko's kitchen."
+    "description": "A plated serving of Foie gras ball on puff pastry."
   }
 ]

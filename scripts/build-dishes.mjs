@@ -50,7 +50,7 @@ for (const line of lines) {
     image,
     alt: `A plated serving of ${name}`,
     category: categoryFor(name),
-    description: `${name}, made in Tomoko's kitchen.`
+    description: `A plated serving of ${name}.`
   });
 }
 
